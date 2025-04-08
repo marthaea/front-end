@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchSpark Teacher's Community</title>
+    <link rel="stylesheet" href="reset-password.css">
+    <style>
+        .welcome-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+
+        .welcome-card {
+            text-align: center;
+            padding: 40px 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .welcome-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 16px;
+            color: #333;
+        }
+
+        .welcome-text {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 24px;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        @media (min-width: 640px) {
+            .button-group {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+
+        .login-btn {
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .forgot-btn {
+            background-color: #ddd;
+            color: #333;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .login-btn:hover {
+            background-color: #002855;
+        }
+
+        .forgot-btn:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-container">
+        <div class="welcome-card">
+            <h1 class="welcome-title">SchSpark Teacher's Community</h1>
+            <p class="welcome-text">Welcome to SchSpark, where we help individuals grow by unleashing their potential.</p>
+            
+            <div class="button-group">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="forgot-password.html" class="forgot-btn">Forgot Password</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

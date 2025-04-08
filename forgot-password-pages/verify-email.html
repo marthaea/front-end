@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Email - SchSpark</title>
+    <link rel="stylesheet" href="reset-password.css">
+</head>
+<body>
+   
+    
+    <div class="container">
+        <div class="card">
+            <div class="content">
+                <img src="schsparklogo.jpeg" alt="SchSpark Logo" class="logo">
+                
+                <button class="back-btn" onclick="window.location.href='forgot-password.html'">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                
+                <h1>Verify your Email Address</h1>
+                <p>A Verification code has just been sent to your email</p>
+                <p>Please enter the code below</p>
+                
+                <div class="otp-inputs">
+                    <input class="otp-input" type="text" maxlength="1" value="2" onkeyup="moveToNext(this, 1)">
+                    <input class="otp-input" type="text" maxlength="1" value="0" onkeyup="moveToNext(this, 2)">
+                    <input class="otp-input" type="text" maxlength="1" value="4" onkeyup="moveToNext(this, 3)">
+                    <input class="otp-input" type="text" maxlength="1" value="5" onkeyup="moveToNext(this, 4)">
+                </div>
+                
+                <button class="btn" onclick="window.location.href='reset-password.html'">Verify</button>
+                
+                <div class="resend-link">
+                    <button onclick="alert('OTP has been resent to your email')">Resend OTP</button>
+                </div>
+            </div>
+            
+            <div class="illustration">
+                <img src="verification.png" alt="Verification Illustration">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function moveToNext(field, nextFieldNum) {
+            if (field.value.length >= field.maxLength) {
+                const nextField = document.getElementsByClassName('otp-input')[nextFieldNum];
+                if (nextField) {
+                    nextField.focus();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
