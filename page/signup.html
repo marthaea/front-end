@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchSpark</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.12.0/dist/emoji-picker.min.css">
+    <link rel="stylesheet" href="./stylesheet/styles.css">
+</head>
+<style>
+    /* Main Section Styling */
+    .main-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        padding: 20px;
+        text-decoration: black;
+        
+    }
+
+    .signup-container {
+        display: flex;
+        max-width: 900px;
+        width: 100%;
+        /* background-color: #fff; */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        font-weight: bold;
+    }
+  
+
+    .image-section {
+        flex: 1;
+        background: url('https://via.placeholder.com/400x500') no-repeat center center;
+        background-size: cover;
+        height: fit-content;
+        margin-top: 100px;
+        width: 563;
+
+    }
+
+    .form-section {
+        flex: 1;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .form-section h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+    }
+
+    .form-group input:focus {
+        outline: none;
+        border-color: #1e3a8a;
+    }
+
+    .signup-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #1e3a8a;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+
+    .signup-btn:hover {
+        background-color: #2b4db3;
+    }
+
+    .login-link {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 100;
+    }
+
+    .login-link a {
+        color: #1e3a8a;
+        text-decoration: none;
+    }
+
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+
+    .divider {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 14px;
+        color: #666;
+        position: relative;
+    }
+
+    .divider::before,
+    .divider::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 40%;
+        height: 1px;
+        background-color: #ccc;
+    }
+
+    .divider::before {
+        left: 0;
+    }
+
+    .divider::after {
+        right: 0;
+    }
+
+    .social-login {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-weight: bold;
+    }
+
+    .social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+    .social-btn img {
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    .social-btn:hover {
+        background-color: #f0f0f0;
+    }
+       /* Mobile Responsiveness */
+       @media (max-width: 768px) {
+            .signup-container {
+                flex-direction: column;
+                max-width: 100%;
+            }
+
+            .image-section {
+                flex: none;
+                height: 200px;
+                width: 100%;
+            }
+
+            .form-section {
+                padding: 20px;
+            }
+
+            .form-section h2 {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            .form-group input {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .signup-btn {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .login-link {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            .divider {
+                font-size: 12px;
+                margin: 15px 0;
+            }
+
+            .social-btn {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .social-btn img {
+                width: 18px;
+                margin-right: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-section {
+                padding: 10px;
+            }
+
+            .signup-container {
+                border-radius: 4px;
+            }
+
+            .image-section {
+                height: 150px;
+            }
+
+            .form-section {
+                padding: 15px;
+            }
+
+            .form-section h2 {
+                font-size: 18px;
+            }
+
+            .form-group input {
+                padding: 6px;
+                font-size: 12px;
+            }
+
+            .signup-btn {
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .login-link {
+                font-size: 12px;
+            }
+
+            .divider {
+                font-size: 10px;
+            }
+
+            .social-btn {
+                padding: 6px;
+                font-size: 12px;
+            }
+
+            .social-btn img {
+                width: 16px;
+                margin-right: 6px;
+            }
+        }
+</style>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="./images/logo1.png" alt="SchSpark Logo" width="92" height="60">
+                </div>
+                
+                <div class="desktop-nav">
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">Home</a></li>
+                        <li><a href="#" class="nav-link">About Us</a></li>
+                        <li><a href="#" class="nav-link">Library</a></li>
+                        <li><a href="#" class="nav-link">Market Place</a></li>
+                        <li><a href="#" class="nav-link">Contact Us</a></li>
+                    </ul>
+                    
+                    <div class="nav-icons">
+                        <a href="#" class="icon-link"><i class="fa-solid fa-bell"></i></a>
+                        <a href="#" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    
+                    <div class="auth-buttons">
+                        <a href="#" class="login">Log In</a>
+                        <a href="#" class="signup">Sign Up</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-menu-toggle">
+                    <button class="hamburger">☰</button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="#" class="mobile-nav-link">Home</a></li>
+                    <li><a href="#" class="mobile-nav-link">About Us</a></li>
+                    <li><a href="#" class="mobile-nav-link">Library</a></li>
+                    <li><a href="#" class="mobile-nav-link">Market Place</a></li>
+                    <li><a href="#" class="mobile-nav-link">Contact Us</a></li>
+                    <li class="mobile-nav-icons">
+                        <a href="#" class="mobile-icon-link"><i class="fa-solid fa-bell"></i></a>
+                        <a href="#" class="mobile-icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <li class="mobile-auth-buttons">
+                        <a href="login.html" class="mobile-login">Log In</a>
+                        <a href="signup.html" class="mobile-signup">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-section">
+        <div class="signup-container">
+            <!-- Image Section -->
+            <div class="image-section">
+                <img src="https://s3-alpha-sig.figma.com/img/8145/27e7/e8b8522ce04be4608299b065493f0f36?Expires=1744588800&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=Kuo977-OHt5qK3XazCK~rW6qkP-UT1Ikc~bkhRYarc0~bwD~yBafJ-2u~VFsdYv2k3uwxM-kd6inyhZxd~Fn1Sx8vrAvUxo~e15J8eKVAaV~OZ5OkreqJQlDTz~M-XkIXZiqem3O4XoFbqgnEt62-HAw1mH~TsWG1uVfN1PjBt8pm4qwIFvv~fhadZJ3QUbg6DNU7h0B7-A5k1w3UevUkSvQxKWLenUQV4Y6CMOx1R8-5yCZqTZAKgxqQZdnU5QWf1FwumI8Bojss5gQ2Kdg~xaAnHwiMAeUJtW2IRrPmM3HMV5NWwFLjGAlj~rk5RATyE9cv-TcNXCspK8kX7WxCA__" alt="">
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-section">
+                <h2>Create Account</h2>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name"  required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email"  required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password"  required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">confirm password</label>
+                    <input type="password" id="confirm-password"  required>
+                </div>
+                <button class="signup-btn" onclick="handleSignup()">Sign Up</button>
+                <div class="login-link">
+                    Already have an account? <a href="#">Log In</a>
+                </div>
+
+                <!-- Divider -->
+                <div class="divider">OR CONTINUE WITH</div>
+
+                <!-- Social Login Buttons -->
+                <div class="social-login" ">
+                    <button class="social-btn">
+                        <img src="https://www.google.com/favicon.ico" alt="Google Icon">
+                        Sign Up with Google
+                    </button>
+                    <button class="social-btn">
+                        <img src="https://www.facebook.com/favicon.ico" alt="Facebook Icon">
+                        Sign Up with Facebook
+                    </button>
+                    <button class="social-btn">
+                        <img src="https://www.apple.com/favicon.ico" alt="Apple Icon">
+                        Sign Up with Apple
+                    </button>
+                    <button class="social-btn">
+                        <img src="https://www.microsoft.com/favicon.ico" alt="Microsoft Icon">
+                        Sign Up with Microsoft
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-grid">
+                <!-- Contact Information -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./images/logo1.png" alt="SchSpark Logo" width="100" height="100">
+                    </div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li class="contact-item">
+                            <i class="fa-solid fa-envelope contact-icon"></i>
+                            <a href="mailto:schspark@gmail.com">schspark@gmail.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-phone contact-icon"></i>
+                            <a href="tel:+2341234567890">+234 1234567890</a>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-location-dot contact-icon"></i>
+                            <span>6 Qwerty Layout, Surulere, Lagos, Nigeria</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Explore Links -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Courses</a></li>
+                        <li><a href="#" class="footer-link">Cart</a></li>
+                        <li><a href="#" class="footer-link">Profile</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Help</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms and Conditions</a></li>
+                        <li><a href="#" class="footer-link">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="social-links">
+                <ul class="social-list">
+                    <li><img src="https://img.icons8.com/?size=48&id=118497&format=png" alt="Facebook" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/?size=48&id=32323&format=png" alt="Instagram" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/?size=48&id=13930&format=png" alt="LinkedIn" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/fluent/40/twitterx--v2.png" alt="Twitter/X" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/?size=48&id=19318&format=png" alt="YouTube" class="social-icon"></li>
+                </ul>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 SchSpark. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
