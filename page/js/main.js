@@ -190,3 +190,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 reader.readAsDataURL(file);
             }
         });
+
+
+        //cart_section
+
+        function removeItem(button) {
+            const item = button.parentElement;
+            const price = parseInt(item.getAttribute('data-price'));
+            item.remove();
+      
+            // Update cart count
+            const cartCount = document.getElementById('cart-count');
+            let count = parseInt(cartCount.textContent);
+            count--;
+            cartCount.textContent = count;
+      
+            // Update total
+            const totalElement = document.getElementById('total');
+            const subTotalElement = document.getElementById('sub-total');
+            let total = parseInt(totalElement.textContent.replace('N₦', '').replace(',', ''));
+            total -= price;
+            totalElement.textContent = `N₦${total.toLocaleString()}`;
+            subTotalElement.textContent = `N₦${total.toLocaleString()}`;
+          }
