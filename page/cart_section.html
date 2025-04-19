@@ -1,0 +1,348 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchSpark</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.12.0/dist/emoji-picker.min.css">
+    <link rel="stylesheet" href="./stylesheet/styles.css">
+</head>
+<style>
+   
+    .breadcrumb {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+    .breadcrumb a {
+        color: #666;
+        text-decoration: none;
+    }
+    .cart-container {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 20px;
+        
+    }
+    .cart-items {
+        width: 65%;
+    }
+    .cart-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .cart-title span {
+        background-color: #e0e0e0;
+        border-radius: 50%;
+        padding: 2px 8px;
+        font-size: 14px;
+        margin-left: 10px;
+    }
+    .cart-item {
+        display: flex;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 15px;
+        padding: 15px;
+       
+    }
+    .cart-item img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border-radius: 5px;
+        margin-right: 15px;
+    }
+    .cart-item-details {
+        flex-grow: 1;
+    }
+    .cart-item-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .cart-item-instructor {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 5px;
+    }
+    .cart-item-price {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    .cart-item-rating {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+    }
+    .stars {
+        color: #f5c518;
+        margin-right: 5px;
+    }
+    .rating-count {
+        color: #666;
+    }
+    .cart-item-remove {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+        color: #666;
+    }
+    .cart-summary {
+        width: 30%;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin-top: 30px;
+       
+    }
+    .cart-summary div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-size: 16px;
+        
+    }
+    .cart-summary input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+    }
+    .cart-summary button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .add-people {
+        background-color: #fff;
+        color: #1a73e8;
+        border: 1px solid #1a73e8;
+    }
+    .checkout {
+        background-color: #1a73e8;
+        color: #fff;
+    }
+    .checkout:hover {
+        background-color: #1557b0;
+    }
+</style>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="./images/logo1.png" alt="SchSpark Logo" width="92" height="60">
+                </div>
+                
+                <div class="desktop-nav">
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">Home</a></li>
+                        <li><a href="#" class="nav-link">About Us</a></li>
+                        <li><a href="#" class="nav-link">Library</a></li>
+                        <li><a href="#" class="nav-link">Market Place</a></li>
+                        <li><a href="#" class="nav-link">Contact Us</a></li>
+                    </ul>
+                    
+                    <div class="nav-icons">
+                        <a href="#" class="icon-link"><i class="fa-solid fa-bell"></i></a>
+                        <a href="#" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    
+                    <div class="auth-buttons">
+                        <a href="#" class="login">Log In</a>
+                        <a href="#" class="signup">Sign Up</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-menu-toggle">
+                    <button class="hamburger">☰</button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="#" class="mobile-nav-link">Home</a></li>
+                    <li><a href="#" class="mobile-nav-link">About Us</a></li>
+                    <li><a href="#" class="mobile-nav-link">Library</a></li>
+                    <li><a href="#" class="mobile-nav-link">Market Place</a></li>
+                    <li><a href="#" class="mobile-nav-link">Contact Us</a></li>
+                    <li class="mobile-nav-icons">
+                        <a href="#" class="mobile-icon-link"><i class="fa-solid fa-bell"></i></a>
+                        <a href="#" class="mobile-icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <li class="mobile-auth-buttons">
+                        <a href="login.html" class="mobile-login">Log In</a>
+                        <a href="signup.html" class="mobile-signup">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content container">
+    <div class="breadcrumb">
+        <a href="#">Home</a> / My Cart
+    </div>
+
+    <div class="cart-container">
+        <div class="cart-items">
+            <h1 class="cart-title">My Cart <span>3</span></h1>
+
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100" alt="Course Image">
+                <div class="cart-item-details">
+                    <div class="cart-item-title">Foundations of Modern Teaching in Resource-Constrained Environments</div>
+                    <div class="cart-item-instructor">Fatima Ali</div>
+                    <div class="cart-item-price">Free</div>
+                    <div class="cart-item-rating">
+                        <span class="stars">5.0 ★★★★★</span>
+                        <span class="rating-count">(150)</span>
+                    </div>
+                </div>
+                <button class="cart-item-remove" onclick="removeItem(1)">🗑️</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100" alt="Course Image">
+                <div class="cart-item-details">
+                    <div class="cart-item-title">Advanced Digital Tools & Classroom Integration</div>
+                    <div class="cart-item-instructor">Fatima Ali</div>
+                    <div class="cart-item-price">Free</div>
+                    <div class="cart-item-rating">
+                        <span class="stars">5.0 ★★★★★</span>
+                        <span class="rating-count">(150)</span>
+                    </div>
+                </div>
+                <button class="cart-item-remove" onclick="removeItem(2)">🗑️</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="https://via.placeholder.com/100" alt="Course Image">
+                <div class="cart-item-details">
+                    <div class="cart-item-title">Basic Digital Literacy for Rural Educators</div>
+                    <div class="cart-item-instructor">Fatima Ali</div>
+                    <div class="cart-item-price">Free</div>
+                    <div class="cart-item-rating">
+                        <span class="stars">5.0 ★★★★★</span>
+                        <span class="rating-count">(150)</span>
+                    </div>
+                </div>
+                <button class="cart-item-remove" onclick="removeItem(3)">🗑️</button>
+            </div>
+        </div>
+
+        <div class="cart-summary">
+            <div>
+                <span>Sub Total</span>
+                <span>₦13,500</span>
+            </div>
+            <div>
+                <span>Discount</span>
+                <span>-</span>
+            </div>
+            <div>
+                <span><strong>Total</strong></span>
+                <span><strong>₦13,500</strong></span>
+            </div>
+            <input type="text" placeholder="Add Discount">
+            <button class="add-people">Add People</button>
+            <button class="checkout" onclick="checkout()">Checkout Course</button>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-container container">
+        <div class="footer-grid">
+            <!-- Contact Information -->
+            <div class="footer-section">
+                <div class="footer-logo">
+                    <img src="./images/logo1.png" alt="SchSpark Logo" width="100" height="100">
+                </div>
+                <h4 class="footer-heading">Contact Us</h4>
+                <ul class="contact-info">
+                    <li class="contact-item">
+                        <i class="fa-solid fa-envelope contact-icon"></i>
+                        <a href="mailto:schspark@gmail.com">schspark@gmail.com</a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fa-solid fa-phone contact-icon"></i>
+                        <a href="tel:+2341234567890">+234 1234567890</a>
+                    </li>
+                    <li class="contact-item">
+                        <i class="fa-solid fa-location-dot contact-icon"></i>
+                        <span>6 Qwerty Layout, Surulere, Lagos, Nigeria</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Explore Links -->
+            <div class="footer-section">
+                <h4 class="footer-heading">Explore</h4>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Home</a></li>
+                    <li><a href="#" class="footer-link">Courses</a></li>
+                    <li><a href="#" class="footer-link">Cart</a></li>
+                    <li><a href="#" class="footer-link">Profile</a></li>
+                </ul>
+            </div>
+            
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Help</a></li>
+                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                    <li><a href="#" class="footer-link">Terms and Conditions</a></li>
+                    <li><a href="#" class="footer-link">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Social Links -->
+        <div class="social-links">
+            <ul class="social-list">
+                <li><img src="https://img.icons8.com/?size=48&id=118497&format=png" alt="Facebook" class="social-icon"></li>
+                <li><img src="https://img.icons8.com/?size=48&id=32323&format=png" alt="Instagram" class="social-icon"></li>
+                <li><img src="https://img.icons8.com/?size=48&id=13930&format=png" alt="LinkedIn" class="social-icon"></li>
+                <li><img src="https://img.icons8.com/fluent/40/twitterx--v2.png" alt="Twitter/X" class="social-icon"></li>
+                <li><img src="https://img.icons8.com/?size=48&id=19318&format=png" alt="YouTube" class="social-icon"></li>
+            </ul>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>&copy; 2025 SchSpark. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="./js/main.js"></script>
+    <script>
+        function removeItem(itemId) {
+            alert(`Item ${itemId} removed from cart!`);
+            // Add logic to remove the item from the cart and update the total
+        }
+
+        function checkout() {
+            alert("Proceeding to checkout!");
+            // Add logic to handle checkout process
+        }
+    </script>
+</body>
+</html>
