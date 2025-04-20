@@ -1,0 +1,530 @@
+:root {
+    --primary-color: #003366;
+    --secondary-color: #FF9843;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --yellow: #FFD700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+/* Navigation Styles */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.login-btn, .signup-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-btn {
+    color: var(--text-color);
+}
+
+.signup-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Hero Section */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #dbe1e8; /* similar to the image's background */
+  }
+  
+  .hero {
+    position: relative;
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #dbe1e8;
+    overflow: hidden;
+    min-height: 500px;
+  }
+  
+  .hero-content h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #333;
+    max-width: 600px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+    line-height: 1.5;
+  }
+  
+  .hero-dots {
+    width: 150px;
+    height: 150px;
+    background-image: radial-gradient(#333 1px, transparent 1px);
+    background-size: 10px 10px;
+    margin: 20px auto 0;
+    z-index: 2;
+    position: relative;
+  }
+  
+  /* Floating Images */
+  .floating-images img {
+    position: absolute;
+    
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Individual image positions to match screenshot */
+  .img1 {
+    top: 80px;
+    left: 10%;
+    width: 70px;
+    height: 70px;
+  }
+  
+  .img2 {
+    top: 80px;
+    right: 15%;
+    width: 70px;
+    height: 70px;
+  }
+  
+  .img3 {
+    top: 15px;
+    left: 40%;
+    width: 80px;
+    height: 80px;
+  }
+  
+  /* Center medium image */
+  .img4 {
+    top: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 100px;
+  }
+  
+  /* Bottom left large */
+  .img5 {
+    bottom: 0;
+    left: 200px;
+    width: 200px;
+    height: 250px;
+  }
+  
+  /* Bottom right large */
+  .img6 {
+    bottom: 0;
+    right: 200px;
+    width: 200px;
+    height: autopx;
+  }
+  
+  /* Additional floating image */
+  .img7 {
+    top: 20px;
+    right: 35%;
+    width: 70px;
+    height: 70px;
+  }
+
+/* Benefits Section */
+.benefits {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.benefits h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 600;
+}
+
+.benefits-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  max-width: 955px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background-color: #fff;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.benefit-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Tutors Section */
+.tutors {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.tutors h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 600;
+}
+
+.tutors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tutor-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.tutor-card:hover {
+  transform: translateY(-5px);
+}
+
+.tutor-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.tutor-card h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.tutor-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0;
+}
+
+.view-profile {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #021b36;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.view-profile:hover {
+  background-color: #eb7d00;
+}
+
+/* Profile Page Styles */
+.profile-main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.profile-header {
+    background-color: var(--yellow);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.profile-info {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-details {
+    flex: 1;
+}
+
+.profile-details h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.profile-details p {
+    margin: 0.5rem 0;
+}
+
+.subject {
+    font-weight: 500;
+}
+
+.availability, .time, .location {
+    color: #666;
+}
+
+.price {
+    font-weight: 600;
+    margin: 1rem 0;
+}
+.action-buttons {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.action-buttons-two {
+    display: flex;
+    gap: 50rem;
+    margin-top: 1rem;
+}
+
+.book-now, .message {
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.book-now {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.message {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.profile-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.profile-content h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 1rem;
+}
+
+.profile-content ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+}
+
+.experience-item {
+    margin: 1rem 0;
+}
+
+.job-title {
+    font-weight: 600;
+}
+
+.company {
+    color: #666;
+}
+
+.date {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.reviews {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.reviews h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #333;
+  font-weight: 600;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.review-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+  text-align: left;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.reviewer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.reviewer img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviewer span {
+  font-weight: 500;
+  color: #333;
+}
+
+.review-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.stars {
+  font-size: 18px;
+  color: #f1c40f;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    padding: 4rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    margin: 0.5rem 0;
+    color: var(--text-color);
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.footer-links h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: inline-block;
+    margin: 0.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .profile-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
