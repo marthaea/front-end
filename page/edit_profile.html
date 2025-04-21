@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchSpark</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.12.0/dist/emoji-picker.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/solar-icons@1.0.1/js/solar-icons.min.js"></script>
+    <link rel="stylesheet" href="./stylesheet/styles.css">
+</head>
+<style>
+      /* === Header Styles === */
+      .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .back-arrow {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233a86ff"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .profile-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #333;
+            margin: 0;
+        }
+
+         /* === Image Container === */
+         .profile-image-container {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #3a86ff;
+        }
+
+        .edit-icon {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: transparent;
+            color: #3a86ff;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        .edit-icon:hover {
+            color: #2667cc;
+        }
+
+     :root {
+        --primary: #3a86ff;
+        --secondary: #2667cc;
+        --light: #f8f9fa;
+        --dark: #212529;
+        --border: #dee2e6;
+        --error: #ff4d6d;
+    } 
+    
+    .profile-card {
+        font-weight: bold;
+        font-family: 'Segoe UI', system-ui, sans-serif;
+        background-color: #f5f7ff;
+        color: var(--dark);
+        padding: 20px;
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        padding: 30px;
+    }
+    
+    .profile-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 25px;
+        color: var(--dark);
+        text-align: center;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: var(--dark);
+    }
+    
+    input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: all 0.3s;
+    }
+    
+    input:focus {
+        outline: none;
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+    }
+    
+    .btn {
+        background-color:  #00264D;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        width: 100%;
+        transition: background 0.3s;
+        margin-top: 10px;
+    }
+    
+    .btn:hover {
+        background-color: var(--secondary);
+    }
+    
+    .change-password {
+        color: var(--primary);
+        text-decoration: none;
+        font-size: 0.9rem;
+        display: inline-block;
+        margin-top: 5px;
+    }
+    
+    .change-password:hover {
+        text-decoration: underline;
+    }
+    
+    .error-message {
+        color: var(--error);
+        font-size: 0.8rem;
+        margin-top: 5px;
+        display: none;
+    }
+
+    img-profile{
+        width: 218;
+        height: 218;
+        top: 174px;
+        left: 611px;
+    }
+
+    /* Solar Icons adjustment */
+    .si {
+        font-size: 16px;
+    }
+</style>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="./images/logo1.png" alt="SchSpark Logo" width="92" height="60">
+                </div>
+                
+                <div class="desktop-nav">
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">Home</a></li>
+                        <li><a href="#" class="nav-link">About Us</a></li>
+                        <li><a href="#" class="nav-link">Library</a></li>
+                        <li><a href="#" class="nav-link">Market Place</a></li>
+                        <li><a href="#" class="nav-link">Contact Us</a></li>
+                    </ul>
+                    
+                    <div class="nav-icons">
+                        <a href="#" class="icon-link"><i class="fa-solid fa-bell"></i></a>
+                        <a href="#" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    
+                    <div class="auth-buttons">
+                        <a href="#" class="login">Log In</a>
+                        <a href="#" class="signup">Sign Up</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-menu-toggle">
+                    <button class="hamburger">☰</button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="#" class="mobile-nav-link">Home</a></li>
+                    <li><a href="#" class="mobile-nav-link">About Us</a></li>
+                    <li><a href="#" class="mobile-nav-link">Library</a></li>
+                    <li><a href="#" class="mobile-nav-link">Market Place</a></li>
+                    <li><a href="#" class="mobile-nav-link">Contact Us</a></li>
+                    <li class="mobile-nav-icons">
+                        <a href="#" class="mobile-icon-link"><i class="fa-solid fa-bell"></i></a>
+                        <a href="#" class="mobile-icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <li class="mobile-auth-buttons">
+                        <a href="login.html" class="mobile-login">Log In</a>
+                        <a href="signup.html" class="mobile-signup">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="profile-header">
+        <div class="back-arrow" onclick="window.history.back()"></div>
+        <h1 class="profile-title">Edit Profile</h1>
+    </div>
+
+    <main class="main-content container">
+        <div class="profile-card">
+            <!-- Profile Image Section with Pencil Icon -->
+            <div class="profile-image-container">
+                <img src="https://via.placeholder.com/100" alt="Profile" class="profile-image" id="profileImage">
+                <div class="edit-icon" onclick="document.getElementById('imageUpload').click()">
+                    <i class="fas fa-pencil-alt"></i>
+                </div>
+                <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+            </div>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="Enter first name">
+                    <div class="error-message" id="firstName-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Enter last name">
+                    <div class="error-message" id="lastName-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter username">
+                    <div class="error-message" id="username-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Enter email">
+                    <div class="error-message" id="email-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter phone number">
+                    <div class="error-message" id="phone-error"></div>
+                </div>
+                
+                <a href="#" class="change-password" id="changePasswordBtn">Change Password</a>
+                
+                <button type="submit" class="btn">Save Changes</button>
+            </form>
+        </div>
+    
+        <!-- Change Password Modal (hidden by default) -->
+        <div id="passwordModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+            <div style="background: white; padding: 25px; border-radius: 10px; width: 90%; max-width: 400px;">
+                <h2 style="margin-top: 0;">Change Password</h2>
+                <div class="form-group">
+                    <label for="currentPassword">Current Password</label>
+                    <input type="password" id="currentPassword">
+                </div>
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <input type="password" id="newPassword">
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm New Password</label>
+                    <input type="password" id="confirmPassword">
+                </div>
+                <button class="btn" id="updatePasswordBtn" style="margin-top: 15px;">Update Password</button>
+                <button class="btn" id="cancelPasswordBtn" style="background: #6c757d; margin-top: 10px;">Cancel</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-grid">
+                <!-- Contact Information -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./images/logo1.png" alt="SchSpark Logo" width="100" height="100">
+                    </div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li class="contact-item">
+                            <i class="fa-solid fa-envelope contact-icon"></i>
+                            <a href="mailto:schspark@gmail.com">schspark@gmail.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-phone contact-icon"></i>
+                            <a href="tel:+2341234567890">+234 1234567890</a>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-location-dot contact-icon"></i>
+                            <span>6 Qwerty Layout, Surulere, Lagos, Nigeria</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Explore Links -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Courses</a></li>
+                        <li><a href="#" class="footer-link">Cart</a></li>
+                        <li><a href="#" class="footer-link">Profile</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Help</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms and Conditions</a></li>
+                        <li><a href="#" class="footer-link">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="social-links">
+                <ul class="social-list">
+                    <li><img src="https://img.icons8.com/?size=48&id=118497&format=png" alt="Facebook" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/?size=48&id=32323&format=png" alt="Instagram" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/?size=48&id=13930&format=png" alt="LinkedIn" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/fluent/40/twitterx--v2.png" alt="Twitter/X" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/?size=48&id=19318&format=png" alt="YouTube" class="social-icon"></li>
+                </ul>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 SchSpark. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>

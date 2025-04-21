@@ -6,181 +6,259 @@
     <title>SchSpark</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.12.0/dist/emoji-picker.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/solar-icons@1.0.1/js/solar-icons.min.js"></script>
     <link rel="stylesheet" href="./stylesheet/styles.css">
 </head>
 <style>
-      /* === Header Styles === */
-      .profile-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .back-arrow {
-            width: 24px;
-            height: 24px;
-            cursor: pointer;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%233a86ff"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>');
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .profile-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: #333;
-            margin: 0;
-        }
-
-
-         /* === Image Container === */
-         .profile-image-container {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            margin: 20px auto;
-        }
-
-        .profile-image {
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid #3a86ff;
-        }
-
-        .edit-icon {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            background: #3c658f;
-            color: rgb(0, 0, 0);
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .edit-icon:hover {
-            background: #2667cc;
-        }
-
-     :root {
-        --primary: #3a86ff;
-        --secondary: #2667cc;
-        --light: #f8f9fa;
-        --dark: #212529;
-        --border: #dee2e6;
-        --error: #ff4d6d;
-    } 
-    
-   
-    
-    .profile-card {
-        font-weight: bold;
-        font-family: 'Segoe UI', system-ui, sans-serif;
-        background-color: #f5f7ff;
-        color: var(--dark);
+    /* Main Section Styling */
+    .main-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
         padding: 20px;
-        max-width: 600px;
-        margin: 0 auto;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        padding: 30px;
+        text-decoration: black;
+        
     }
-    
-    .profile-title {
-        font-size: 1.5rem;
-        font-weight: 600;
-        margin-bottom: 25px;
-        color: var(--dark);
+
+    .signup-container {
+        display: flex;
+        max-width: 900px;
+        width: 100%;
+        /* background-color: #fff; */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        font-weight: bold;
+    }
+  
+
+    .image-section {
+        flex: 1;
+        background: url('https://via.placeholder.com/400x500') no-repeat center center;
+        background-size: cover;
+        height: fit-content;
+        margin-top: 100px;
+        width: 563;
+
+    }
+
+    .form-section {
+        flex: 1;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .form-section h2 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
         text-align: center;
     }
-    
+
     .form-group {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
-    
-    label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 500;
-        color: var(--dark);
-    }
-    
-    input {
+
+    .form-group input {
         width: 100%;
-        padding: 12px 15px;
-        border: 1px solid var(--border);
-        border-radius: 6px;
-        font-size: 1rem;
-        transition: all 0.3s;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
     }
-    
-    input:focus {
+
+    .form-group input:focus {
         outline: none;
-        border-color: var(--primary);
-        box-shadow: 0 0 0 3px rgba(58, 134, 255, 0.2);
+        border-color: #1e3a8a;
     }
-    
-    .btn {
-        background-color:  #00264D;
-        color: white;
-        border: none;
-        padding: 12px;
-        border-radius: 6px;
-        font-size: 1rem;
-        font-weight: 500;
-        cursor: pointer;
+
+    .signup-btn {
         width: 100%;
-        transition: background 0.3s;
-        margin-top: 10px;
+        padding: 12px;
+        background-color: #1e3a8a;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 10px;
     }
-    
-    .btn:hover {
-        background-color: var(--secondary);
+
+    .signup-btn:hover {
+        background-color: #2b4db3;
     }
-    
-    .change-password {
-        color: var(--primary);
+
+    .login-link {
+        text-align: center;
+        margin-bottom: 20px;
+        font-weight: 100;
+    }
+
+    .login-link a {
+        color: #1e3a8a;
         text-decoration: none;
-        font-size: 0.9rem;
-        display: inline-block;
-        margin-top: 5px;
     }
-    
-    .change-password:hover {
+
+    .login-link a:hover {
         text-decoration: underline;
     }
-    
-    .error-message {
-        color: var(--error);
-        font-size: 0.8rem;
-        margin-top: 5px;
-        display: none;
+
+    .divider {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 14px;
+        color: #666;
+        position: relative;
     }
 
-
-    img-profile{
-        width: 218;
-      height: 218;
-     top: 174px;
-    left: 611px;
-
+    .divider::before,
+    .divider::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: 40%;
+        height: 1px;
+        background-color: #ccc;
     }
 
-     /* Solar Icons adjustment */
-     .si {
-            font-size: 16px;
+    .divider::before {
+        left: 0;
+    }
+
+    .divider::after {
+        right: 0;
+    }
+
+    .social-login {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-weight: bold;
+    }
+
+    .social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #fff;
+    }
+
+    .social-btn img {
+        width: 20px;
+        margin-right: 10px;
+    }
+
+    .social-btn:hover {
+        background-color: #f0f0f0;
+    }
+       /* Mobile Responsiveness */
+       @media (max-width: 768px) {
+            .signup-container {
+                flex-direction: column;
+                max-width: 100%;
+            }
+
+            .image-section {
+                flex: none;
+                height: 200px;
+                width: 100%;
+            }
+
+            .form-section {
+                padding: 20px;
+            }
+
+            .form-section h2 {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+
+            .form-group input {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .signup-btn {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            .login-link {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            .divider {
+                font-size: 12px;
+                margin: 15px 0;
+            }
+
+            .social-btn {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .social-btn img {
+                width: 18px;
+                margin-right: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-section {
+                padding: 10px;
+            }
+
+            .signup-container {
+                border-radius: 4px;
+            }
+
+            .image-section {
+                height: 150px;
+            }
+
+            .form-section {
+                padding: 15px;
+            }
+
+            .form-section h2 {
+                font-size: 18px;
+            }
+
+            .form-group input {
+                padding: 6px;
+                font-size: 12px;
+            }
+
+            .signup-btn {
+                padding: 8px;
+                font-size: 12px;
+            }
+
+            .login-link {
+                font-size: 12px;
+            }
+
+            .divider {
+                font-size: 10px;
+            }
+
+            .social-btn {
+                padding: 6px;
+                font-size: 12px;
+            }
+
+            .social-btn img {
+                width: 16px;
+                margin-right: 6px;
+            }
         }
 </style>
 <body>
@@ -236,78 +314,60 @@
             </div>
         </nav>
     </header>
-    <div class="profile-header">
-        <div class="back-arrow" onclick="window.history.back()"></div>
-        <h1 class="profile-title">Edit Profile</h1>
-    </div>
 
-    <main class="main-content container">
-        <div class="profile-card">
-            <!-- New Header Section -->
-            
-         <!-- Profile Image Section with Solar Icon -->
-        <div class="profile-image-container">
-            <img src="https://via.placeholder.com/100" alt="Profile" class="profile-image" id="profileImage">
-            <div class="edit-icon" onclick="document.getElementById('imageUpload').click()">
-                <i class="si si-pen-line-duotone"></i>
+    <main class="main-section">
+        <div class="signup-container">
+            <!-- Image Section -->
+            <div class="image-section">
+                <img src="./images/girl.png" alt="">
             </div>
-            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
-        </div>
-            <form id="profileForm">
+
+            <!-- Form Section -->
+            <div class="form-section">
+                <h2>Create Account</h2>
                 <div class="form-group">
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" placeholder="Enter first name">
-                    <div class="error-message" id="firstName-error"></div>
+                    <label for="name">Name</label>
+                    <input type="text" id="name"  required>
                 </div>
-                
-                <div class="form-group">
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" placeholder="Enter last name">
-                    <div class="error-message" id="lastName-error"></div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" placeholder="Enter username">
-                    <div class="error-message" id="username-error"></div>
-                </div>
-                
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter email">
-                    <div class="error-message" id="email-error"></div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" placeholder="Enter phone number">
-                    <div class="error-message" id="phone-error"></div>
-                </div>
-                
-                <a href="#" class="change-password" id="changePasswordBtn">Change Password</a>
-                
-                <button type="submit" class="btn">Save Changes</button>
-            </form>
-        </div>
-    
-        <!-- Change Password Modal (hidden by default) -->
-        <div id="passwordModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
-            <div style="background: white; padding: 25px; border-radius: 10px; width: 90%; max-width: 400px;">
-                <h2 style="margin-top: 0;">Change Password</h2>
-                <div class="form-group">
-                    <label for="currentPassword">Current Password</label>
-                    <input type="password" id="currentPassword">
+                    <input type="email" id="email"  required>
                 </div>
                 <div class="form-group">
-                    <label for="newPassword">New Password</label>
-                    <input type="password" id="newPassword">
+                    <label for="password">Password</label>
+                    <input type="password" id="password"  required>
                 </div>
-                <div class="form-group " ">
-                    <label for="confirmPassword">Confirm New Password</label>
-                    <input type="password" id="confirmPassword">
+                <div class="form-group">
+                    <label for="confirm-password">confirm password</label>
+                    <input type="password" id="confirm-password"  required>
                 </div>
-                <button class="btn" id="updatePasswordBtn" style="margin-top: 15px;">Update Password</button>
-                <button class="btn" id="cancelPasswordBtn" style="background: #6c757d; margin-top: 10px;">Cancel</button>
+                <button class="signup-btn" onclick="handleSignup()">Sign Up</button>
+                <div class="login-link">
+                    Already have an account? <a href="#">Log In</a>
+                </div>
+
+                <!-- Divider -->
+                <div class="divider">OR CONTINUE WITH</div>
+
+                <!-- Social Login Buttons -->
+                <div class="social-login">
+                    <button class="social-btn">
+                        <img src="https://www.google.com/favicon.ico" alt="Google Icon">
+                        Sign Up with Google
+                    </button>
+                    <button class="social-btn">
+                        <img src="https://img.icons8.com/?size=100&id=118497&format=png&color=000000" alt="Facebook Icon">
+                        Sign Up with Facebook
+                    </button>
+                    <button class="social-btn">
+                        <img src="https://th.bing.com/th/id/OIP.Zlex9knSQJAg1dMJn6z2YgHaJF?w=225&h=276&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Apple Icon">
+                        Sign Up with Apple
+                    </button>
+                    <button class="social-btn">
+                        <img src="https://www.microsoft.com/favicon.ico" alt="Microsoft Icon">
+                        Sign Up with Microsoft
+                    </button>
+                </div>
             </div>
         </div>
     </main>

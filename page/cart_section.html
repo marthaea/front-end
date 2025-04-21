@@ -83,7 +83,7 @@
         font-size: 14px;
     }
     .stars {
-        color: #f5c518;
+        color: #000000;
         margin-right: 5px;
     }
     .rating-count {
@@ -111,6 +111,8 @@
         margin-bottom: 10px;
         font-size: 16px;
         
+
+        
     }
     .cart-summary input {
         width: 100%;
@@ -133,12 +135,75 @@
         border: 1px solid #1a73e8;
     }
     .checkout {
-        background-color: #1a73e8;
+        background-color: #00264D;
         color: #fff;
     }
     .checkout:hover {
         background-color: #1557b0;
-    }
+    }.input-container {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+   /* Light gray border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  }
+
+  .input-container input {
+    padding: 10px 100px 10px 10px; /* Adjust padding for button */
+    height: 40px;
+    font-size: 16px;
+    border: none; /* Remove default input border */
+    outline: none; /* Remove outline on focus */
+    background-color: transparent; /* Transparent background */
+    color: #374151; /* Dark text color */
+  }
+
+  .input-container input::placeholder {
+    color: #9ca3af; /* Light gray placeholder text */
+  }
+
+  .input-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-container input {
+  width: 100%;
+  padding-right: 70px; /* Leave space for button */
+  height: 40px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.input-container .add-people {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  transform: translateY(-50%);
+  width: 70px; /* ✅ Reduced width */
+  height: 32px;
+  background-color: #00264D;
+  color: white;
+  border: none;
+  border-radius:8px;
+  cursor: pointer;
+   /* Smaller font if needed */
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+  padding: 0; /* Remove horizontal padding */
+}
+
+
+  .input-container .add-people:hover {
+    background-color: #00264D; /* Slightly lighter blue on hover */
+  }
 </style>
 <body>
     <header class="header">
@@ -204,7 +269,7 @@
             <h1 class="cart-title">My Cart <span>3</span></h1>
 
             <div class="cart-item">
-                <img src="https://via.placeholder.com/100" alt="Course Image">
+                <img src="./images/cart2.jpeg" alt="Course Image">
                 <div class="cart-item-details">
                     <div class="cart-item-title">Foundations of Modern Teaching in Resource-Constrained Environments</div>
                     <div class="cart-item-instructor">Fatima Ali</div>
@@ -218,7 +283,7 @@
             </div>
 
             <div class="cart-item">
-                <img src="https://via.placeholder.com/100" alt="Course Image">
+                <img src="./images/cart1.jpeg" alt="Course Image">
                 <div class="cart-item-details">
                     <div class="cart-item-title">Advanced Digital Tools & Classroom Integration</div>
                     <div class="cart-item-instructor">Fatima Ali</div>
@@ -232,7 +297,7 @@
             </div>
 
             <div class="cart-item">
-                <img src="https://via.placeholder.com/100" alt="Course Image">
+                <img src="./images/course_cart.jpeg" alt="Course Image">
                 <div class="cart-item-details">
                     <div class="cart-item-title">Basic Digital Literacy for Rural Educators</div>
                     <div class="cart-item-instructor">Fatima Ali</div>
@@ -247,6 +312,10 @@
         </div>
 
         <div class="cart-summary">
+            <div class="input-container">
+                <input type="text" placeholder="Add Discount">
+                <button class="add-people">Add People</button>
+              </div>
             <div>
                 <span>Sub Total</span>
                 <span>₦13,500</span>
@@ -259,8 +328,7 @@
                 <span><strong>Total</strong></span>
                 <span><strong>₦13,500</strong></span>
             </div>
-            <input type="text" placeholder="Add Discount">
-            <button class="add-people">Add People</button>
+           
             <button class="checkout" onclick="checkout()">Checkout Course</button>
         </div>
     </div>
