@@ -44,3 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
         return re.test(String(email).toLowerCase());
     }
 });
+document.querySelector('.notification-icon').addEventListener('click', function () {
+    alert('You have new notifications!');
+});
