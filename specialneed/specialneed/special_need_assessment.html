@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchSpark Teacher's Community</title>
+    <link rel="stylesheet" href="library.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <!-- Secondary Navigation -->
+        <div class="secondary-nav">
+            <div class="logo-container">
+                <img src="scspark_logo.png" alt="SchSpark Logo" class="small-logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="library1.html" class="active">Library</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="notification-btn"><i class="far fa-bell"></i></button>
+                <button class="notification-btn"><i class="far fa-cart"></i></button>
+                <div class="user-avatar">
+                    <img src="avatar.png" alt="User Avatar">
+                </div>
+                <a href="#" class="login-btn">Log Out</a>
+            </div>
+        </div>
+    </header>
+  
+    <main class="assessment-container">
+        <h2>Special Needs Education Assessment</h2>
+        <form id="assessment-form" onsubmit="submitAssessment(event)">
+            <div class="question">
+                <label for="username">Enter your full name:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="question">
+                <p>1. What does the term "special needs" refer to?</p>
+                <label><input type="radio" name="q1" value="a" required> A range of physical, emotional, and cognitive challenges</label>
+                <label><input type="radio" name="q1" value="b"> Only students with physical disabilities</label>
+                <label><input type="radio" name="q1" value="c"> Children who are behind in math</label>
+                <label><input type="radio" name="q1" value="d"> Students in private schools</label>
+            </div>
+            <div class="question">
+                <p>2. Why is inclusion important in education?</p>
+                <label><input type="radio" name="q2" value="a" required> It builds community and promotes empathy</label>
+                <label><input type="radio" name="q2" value="b"> It benefits all students</label>
+                <label><input type="radio" name="q2" value="c"> It makes teaching easier</label>
+                <label><input type="radio" name="q2" value="d"> It replaces general education</label>
+            </div>
+            <div class="question">
+                <p>3. Who is part of the IEP team?</p>
+                <label><input type="radio" name="q3" value="a" required> Teachers, parents, specialists, and sometimes the student</label>
+                <label><input type="radio" name="q3" value="b"> Only the principal</label>
+                <label><input type="radio" name="q3" value="c"> Just the special education teacher</label>
+                <label><input type="radio" name="q3" value="d"> School nurse and janitor</label>
+            </div>
+            <div class="question">
+                <p>4. Which of these professionals typically conducts diagnostic evaluations?</p>
+                <label><input type="radio" name="q4" value="a" required> Teachers</label>
+                <label><input type="radio" name="q4" value="b"> Psychologists or specialists</label>
+                <label><input type="radio" name="q4" value="c"> Principals</label>
+                <label><input type="radio" name="q4" value="d"> Parents</label>
+            </div>
+            <div class="question">
+                <p>5. Why is breaking tasks into smaller steps useful?</p>
+                <label><input type="radio" name="q5" value="a" required> It helps students stay organized and not feel overwhelmed</label>
+                <label><input type="radio" name="q5" value="b"> It makes the work take longer</label>
+                <label><input type="radio" name="q5" value="c"> It avoids teaching the real content</label>
+                <label><input type="radio" name="q5" value="d"> It gives students more chances to misbehave</label>
+            </div>
+            <div class="question">
+                <p>6. What is a way to promote participation?</p>
+                <label><input type="radio" name="q6" value="a" required> Using think-pair-share or choice boards</label>
+                <label><input type="radio" name="q6" value="b"> Only calling on fast finishers</label>
+                <label><input type="radio" name="q6" value="c"> Avoiding group activities</label>
+                <label><input type="radio" name="q6" value="d"> Giving surprise quizzes</label>
+            </div>
+            <div class="question">
+                <p>7. How often is an IEP reviewed?</p>
+                <label><input type="radio" name="q7" value="a" required> At least once a year</label>
+                <label><input type="radio" name="q7" value="b"> Every five years</label>
+                <label><input type="radio" name="q7" value="c"> Only when problems arise</label>
+                <label><input type="radio" name="q7" value="d"> Never, it stays the same</label>
+            </div>
+            <div class="question">
+                <p>8. What should a teacher do when unkind behavior happens?</p>
+                <label><input type="radio" name="q8" value="a" required> Address it calmly and directly</label>
+                <label><input type="radio" name="q8" value="b"> Ignore it to avoid conflict</label>
+                <label><input type="radio" name="q8" value="c"> Punish the whole class</label>
+                <label><input type="radio" name="q8" value="d"> Wait for a parent to call</label>
+            </div>
+            <div class="question">
+                <p>9. What kind of assessment focuses on reading, writing, and math performance?</p>
+                <label><input type="radio" name="q9" value="a" required> Screening tools</label>
+                <label><input type="radio" name="q9" value="b"> Diagnostic evaluations</label>
+                <label><input type="radio" name="q9" value="c"> Educational assessments</label>
+                <label><input type="radio" name="q9" value="d"> Behavioral reports</label>
+            </div>
+            <div class="question">
+                <p>10. Why is collaboration important when adapting instruction?</p>
+                <label><input type="radio" name="q10" value="a" required> It brings in new ideas and ensures support is consistent</label>
+                <label><input type="radio" name="q10" value="b"> So the teacher doesn't have to do anything</label>
+                <label><input type="radio" name="q10" value="c"> To let families handle instruction</label>
+                <label><input type="radio" name="q10" value="d"> It isn't, teachers should work alone</label>
+            </div>
+            <div class="btn-group">
+                <a href="qui.html" class="btn">Previous</a>
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </main>
+    
+    <!-- Certificate Section -->
+    <div id="certificate-section" style="display:none;">
+        <h2>🎉 Congratulations <span id="user-name-display"></span> on completing the Special Needs Education Course!</h2>
+        <p>Claim your certificate below:</p>
+        <img src="certificate.png" alt="Certificate" width="60%" />
+        <br />
+        <button id="claim-btn">Claim Certificate</button>
+    </div>
+      
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo-section">
+                <img src="scspark_logo.png" alt="Logo" class="footer-logo">
+            </div>
+            <div class="contact-section">
+                <h3 class="footer-heading">CONTACT US</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>schspark@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+234  1234567890</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>6 Lorem ipsum arcu in ut metus eu sollicitudin</span>
+                    </li>
+                </ul>
+
+                <div class="social-icons">
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="x">
+                        <svg viewBox="0 0 24 24" width="14" height="14">
+                            <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="links-section">
+                <h3 class="footer-heading">EXPLORE</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </div>
+
+            <div class="links-section">
+                <h3 class="footer-heading">QUICK LINKS</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+  
+    <script>
+    function submitAssessment(event) {
+        event.preventDefault();
+      
+        // Correct answers array
+        const answers = ["a", "b", "a", "b", "a", "a", "a", "a", "c", "a"];
+        let score = 0;
+      
+        // Validate all questions are answered
+        for (let i = 1; i <= 10; i++) {
+            if (!document.querySelector(`input[name=q${i}]:checked`)) {
+                alert(`Please answer question ${i}`);
+                return;
+            }
+        }
+      
+        // Calculate score
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelector(`input[name=q${i}]:checked`);
+            if (selected && selected.value === answers[i - 1]) {
+                score++;
+            }
+        }
+      
+        const percentage = (score / 10) * 100;
+        const username = document.getElementById('username').value.trim();
+      
+        if (!username) {
+            alert("Please enter your name");
+            return;
+        }
+      
+        if (percentage >= 70) { // Passing score set to 70%
+            document.getElementById('assessment-form').style.display = 'none';
+            document.getElementById('user-name-display').textContent = username;
+            document.getElementById('certificate-section').style.display = 'block';
+            window.scrollTo(0, document.getElementById('certificate-section').offsetTop);
+        } else {
+            alert(`You scored ${score}/10 (${percentage}%). Please review the material and try again.`);
+        }
+    }
+
+    // Add event listener for claim button
+    document.addEventListener('DOMContentLoaded', function() {
+        const claimBtn = document.getElementById('claim-btn');
+        if (claimBtn) {
+            claimBtn.addEventListener('click', function() {
+                alert('Certificate claimed successfully!');
+                // Here you would typically generate/download the certificate
+            });
+        }
+    });
+    </script>
+</body>
+</html>

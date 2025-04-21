@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchSpark Teacher's Community</title>
+    <link rel="stylesheet" href="library.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        
+        
+        <!-- Secondary Navigation -->
+        <div class="secondary-nav">
+            <div class="logo-container">
+                <img src="scspark_logo.png" alt="SchSpark Logo" class="small-logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" >Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="ai.html" class="active">Library</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="notification-btn"><i class="far fa-bell"></i></button>
+                <button class="notification-btn"><i class="far fa-cart"></i></button>
+                <div class="user-avatar">
+                    <img src="avatar.png" alt="User Avatar">
+                </div>
+                <a href="#" class="login-btn">Log Out</a>
+            </div>
+        </div>
+    </header>
+    <main class="coming-soon-section">
+        <div class="content-wrapper">
+            <h1 class="coming-title">🚧 We're Launching Something Exciting!</h1>
+            <p class="coming-description">This page is currently under construction. We're working hard to bring you a new experience. Stay tuned!</p>
+    
+            <div class="countdown" id="countdown">
+                <div><span id="days">00</span><span class="label">Days</span></div>
+                <div><span id="hours">00</span><span class="label">Hours</span></div>
+                <div><span id="minutes">00</span><span class="label">Minutes</span></div>
+                <div><span id="seconds">00</span><span class="label">Seconds</span></div>
+            </div>
+    
+            
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+      
+            <div class="logo-section">
+                <img src="scspark_logo.png" alt="Logo" class="footer-logo">
+            </div>
+            <div class="contact-section">
+                <h3 class="footer-heading">CONTACT US</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>schspark@gmail.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+234  1234567890</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>6 Lorem ipsum arcu in ut metus eu sollicitudin</span>
+                    </li>
+                </ul>
+
+                <div class="social-icons">
+                    <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="x">
+                        <svg viewBox="0 0 24 24" width="14" height="14">
+                            <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="links-section">
+                <h3 class="footer-heading">EXPLORE</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </div>
+
+            
+            <div class="links-section">
+                <h3 class="footer-heading">QUICK LINKS</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">FAQs</a></li>
+                </ul>
+            </div>
+
+           
+           
+        </div>
+    </footer>
+    <script>
+        const targetDate = new Date("2025-06-01T00:00:00").getTime();
+    
+        const countdown = setInterval(() => {
+            const now = new Date().getTime();
+            const gap = targetDate - now;
+    
+            const days = Math.floor(gap / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((gap % (1000 * 60)) / 1000);
+    
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+    
+            if (gap < 0) {
+                clearInterval(countdown);
+                document.getElementById("countdown").innerHTML = "<p>We're Live! 🎉</p>";
+            }
+        }, 1000);
+    </script>
+    
+</body>
+</html>
