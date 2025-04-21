@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchSpark</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.12.0/dist/emoji-picker.min.css">
+    <link rel="stylesheet" href="./stylesheet/styles.css">
+</head>
+<style>
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        .main-section {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .course-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .course-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .course-description {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .lessons-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #1a3c5e;
+            margin-bottom: 10px;
+        }
+        .lessons-list {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .lessons-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .enroll-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1a3c5e;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .price-tag {
+            font-size: 16px;
+            font-weight: bold;
+            color: #1a3c5e;
+            margin-bottom: 10px;
+        }
+</style>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="./images/logo1.png" alt="SchSpark Logo" width="92" height="60">
+                </div>
+                
+                <div class="desktop-nav">
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">Home</a></li>
+                        <li><a href="#" class="nav-link">About Us</a></li>
+                        <li><a href="#" class="nav-link">Library</a></li>
+                        <li><a href="#" class="nav-link">Market Place</a></li>
+                        <li><a href="#" class="nav-link">Contact Us</a></li>
+                    </ul>
+                    
+                    <div class="nav-icons">
+                        <a href="#" class="icon-link"><i class="fa-solid fa-bell"></i></a>
+                        <a href="#" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    
+                    <div class="auth-buttons">
+                        <a href="#" class="login">Log In</a>
+                        <a href="#" class="signup">Sign Up</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-menu-toggle">
+                    <button class="hamburger">☰</button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="#" class="mobile-nav-link">Home</a></li>
+                    <li><a href="#" class="mobile-nav-link">About Us</a></li>
+                    <li><a href="#" class="mobile-nav-link">Library</a></li>
+                    <li><a href="#" class="mobile-nav-link">Market Place</a></li>
+                    <li><a href="#" class="mobile-nav-link">Contact Us</a></li>
+                    <li class="mobile-nav-icons">
+                        <a href="#" class="mobile-icon-link"><i class="fa-solid fa-bell"></i></a>
+                        <a href="#" class="mobile-icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <li class="mobile-auth-buttons">
+                        <a href="login.html" class="mobile-login">Log In</a>
+                        <a href="signup.html" class="mobile-signup">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+        <!-- Your main content here -->
+
+        <main class="main-section">
+            <img src="./images/boy.jpeg" alt="Classroom Management" class="course-image">
+            <h2 class="course-title">Effective Classroom Management</h2>
+            <p class="course-description">
+                <strong>Description:</strong><br>
+                Techniques for establishing routines, managing behavior, and creating a positive classroom environment.
+            </p>
+            <h3 class="lessons-title">Lessons</h3>
+            <ul class="lessons-list">
+                <li>Foundations of Classroom Management</li>
+                <li>Proactive Strategies</li>
+                <li>Behavioral Management Techniques</li>
+                <li>Conflict Resolution</li>
+                <li>Monitoring and Reflecting on Management Practices</li>
+            </ul>
+            <p class="price-tag">FREE</p>
+            <a href="#" class="enroll-btn">ENROLL NOW</a>
+        </main>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-grid">
+                <!-- Contact Information -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./images/logo1.png" alt="SchSpark Logo" width="100" height="100">
+                    </div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li class="contact-item">
+                            <i class="fa-solid fa-envelope contact-icon"></i>
+                            <a href="mailto:schspark@gmail.com">schspark@gmail.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-phone contact-icon"></i>
+                            <a href="tel:+2341234567890">+234 1234567890</a>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-location-dot contact-icon"></i>
+                            <span>6 Qwerty Layout, Surulere, Lagos, Nigeria</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Explore Links -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Courses</a></li>
+                        <li><a href="#" class="footer-link">Cart</a></li>
+                        <li><a href="#" class="footer-link">Profile</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Help</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms and Conditions</a></li>
+                        <li><a href="#" class="footer-link">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="social-links">
+                <ul class="social-list">
+                    <li><img src="https://img.icons8.com/?size=48&id=118497&format=png" alt="Facebook" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/?size=48&id=32323&format=png" alt="Instagram" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/?size=48&id=13930&format=png" alt="LinkedIn" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/fluent/40/twitterx--v2.png" alt="Twitter/X" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/?size=48&id=19318&format=png" alt="YouTube" class="social-icon"></li>
+                </ul>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 SchSpark. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
