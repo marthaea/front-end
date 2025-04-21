@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchSpark Teacher's Community</title>
+    <link rel="stylesheet" href="library.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        
+        
+        <!-- Secondary Navigation -->
+        <div class="secondary-nav">
+            <div class="logo-container">
+                <img src="scspark_logo.png" alt="SchSpark Logo" class="small-logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" >Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="ai.html"class="active">Library</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="notification-btn"><i class="far fa-bell"></i></button>
+                <button class="notification-btn"><i class="far fa-cart"></i></button>
+                <div class="user-avatar">
+                    <img src="avatar.png" alt="User Avatar">
+                </div>
+                <a href="#" class="login-btn">Log Out</a>
+            </div>
+        </div>
+    </header>
+    <div class="course-container">
+    <div class="course-header">
+        <h1 class="course-title">Lesson 4: Training Machine Learning Models</h1>
+        <p class="course-subtitle">Now That Your Data Is Ready... What's Next?</p>
+    </div>
+    
+    <div class="lesson-section">
+        <div class="lesson-content">
+            <p>You've cleaned and prepared your data, great job! Now it's time to teach your machine to learn. In this lesson, you'll explore how machine learning models are trained, evaluated, and improved using structured algorithms and feedback loops. You'll also learn to avoid common pitfalls like overfitting and underfitting.</p>
+            
+            <p>By the end of this lesson, you'll know how to confidently train a model, test its performance, and fine-tune it for better results.</p>
+            
+            <h2>Core Algorithms to Know</h2>
+            <p>Let's start by exploring three essential algorithms that form the backbone of many ML systems:</p>
+            
+            <div class="algorithms-container">
+                <div class="algorithm-card">
+                    <h3>1. Linear Regression</h3>
+                    <ul>
+                        <li>Used for predicting continuous values like prices, scores, or temperatures.</li>
+                        <li>It finds the best straight-line relationship between input features and outputs.</li>
+                    </ul>
+                </div>
+                
+                <div class="algorithm-card">
+                    <h3>2. Decision Trees</h3>
+                    <ul>
+                        <li>These models make decisions by asking a series of yes/no questions.</li>
+                        <li>Easy to understand and visualize, great for beginners!</li>
+                    </ul>
+                </div>
+                
+                <div class="algorithm-card">
+                    <h3>3. k-Nearest Neighbors (k-NN)</h3>
+                    <ul>
+                        <li>This model looks at the 'k' most similar examples to predict the output.</li>
+                        <li>It's simple and works well for classification tasks like handwriting recognition or recommender systems.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/ml-intro" title="Intro to ML Algorithms" allowfullscreen></iframe>
+                <p class="video-caption">Watch: Intro to ML Algorithms</p>
+            </div>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/decision-trees-vs-knn" title="Decision Trees vs k-NN" allowfullscreen></iframe>
+                <p class="video-caption">Watch: Decision Trees vs k-NN</p>
+            </div>
+            
+            <h2>Training, Evaluating, and Tuning Your Model</h2>
+            <p>Once you choose an algorithm, the next step is training it. Here's how:</p>
+            
+            <div class="training-steps">
+                <div class="training-phase">
+                    <h3><i class="fas fa-check-circle"></i> Training Phase</h3>
+                    <ul>
+                        <li>Feed your model a training data set (with known outputs).</li>
+                        <li>The model finds patterns and relationships between inputs and outputs.</li>
+                    </ul>
+                </div>
+                
+                <div class="validation-phase">
+                    <h3><i class="fas fa-check-circle"></i> Validation Phase</h3>
+                    <ul>
+                        <li>Use a validation dataset (separate from training) to test how well your model generalizes to new data.</li>
+                        <li>Adjust hyperparameters like learning rate, number of neighbors (in k-NN), or tree depth to improve performance.</li>
+                    </ul>
+                </div>
+                
+                <div class="evaluation-phase">
+                    <h3><i class="fas fa-check-circle"></i> Evaluation Phase</h3>
+                    <ul>
+                        <li>Use a test set to assess the final model.</li>
+                        <li>Common metrics: accuracy, precision, recall, F1-score (for classification) or RMSE (for regression).</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/training-in-python" title="Training a Model in Python" allowfullscreen></iframe>
+                <p class="video-caption">Watch: Training a Model in Python</p>
+            </div>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/model-evaluation" title="Model Evaluation Basics" allowfullscreen></iframe>
+                <p class="video-caption">Watch: Model Evaluation Basics</p>
+            </div>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/fine-tuning-models" title="Fine-Tuning Models" allowfullscreen></iframe>
+                <p class="video-caption">Watch: Fine-Tuning Models</p>
+            </div>
+            
+            <h2>Avoiding Common Pitfalls</h2>
+            <p>Even well-trained models can fail if you're not careful. Two common issues are:</p>
+            
+            <div class="pitfalls-container">
+                <div class="pitfall-card">
+                    <h3><i class="fas fa-times-circle"></i> Overfitting</h3>
+                    <ul>
+                        <li>The model performs well on training data but poorly on new data.</li>
+                        <li>It has learned the noise, not the real patterns.</li>
+                    </ul>
+                </div>
+                
+                <div class="pitfall-card">
+                    <h3><i class="fas fa-times-circle"></i> Underfitting</h3>
+                    <ul>
+                        <li>The model is too simple to capture the underlying structure of the data.</li>
+                        <li>It performs poorly on both training and test sets.</li>
+                    </ul>
+                </div>
+                
+                <div class="solution-card">
+                    <h3><i class="fas fa-check-circle"></i> Cross-Validation to the Rescue</h3>
+                    <ul>
+                        <li>A technique where the dataset is split into multiple parts (folds), and the model is trained/tested multiple times using different folds.</li>
+                        <li>Helps ensure consistent performance and prevents over-reliance on a single dataset split.</li>
+                    </ul>
+                </div>
+            </div>
+            <img src="aimg4.jpg" alt="">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/overfitting-underfitting" title="Understanding Overfitting & Underfitting" allowfullscreen></iframe>
+                <p class="video-caption">Watch: Understanding Overfitting & Underfitting</p>
+            </div>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/cross-validation" title="Cross-Validation Explained" allowfullscreen></iframe>
+                <p class="video-caption">Watch: Cross-Validation Explained</p>
+            </div>
+            
+            <div class="highlight-box">
+                <h3>Further Reading:</h3>
+                <ul>
+                    <li><a href="https://www.datasciencedojo.com/blog/train-machine-learning-model/" target="_blank">How to Train a Machine Learning Model – Data Science Dojo</a></li>
+                    <li><a href="https://www.datacamp.com/blog/beginners-guide-to-training-ml-models" target="_blank">A Beginner's Guide to Training ML Models – DataCamp</a></li>
+                </ul>
+            </div>
+            
+            <p>Now that you understand how to train and evaluate models, you might wonder: "How do we deploy these models to solve real-world problems?" That's exactly what we'll cover in our next lesson on model deployment and monitoring.</p>
+        </div>
+        
+        <div class="lesson-navigation">
+            <a href="ml_lesson3.html" class="nav-button secondary">
+                <i class="fas fa-arrow-left"></i> Previous Lesson
+            </a>
+            <a href="ml_lesson5.html" class="nav-button">
+                Next Lesson <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-content">
+  
+        <div class="logo-section">
+            <img src="scspark_logo.png" alt="Logo" class="footer-logo">
+        </div>
+        <div class="contact-section">
+            <h3 class="footer-heading">CONTACT US</h3>
+            <ul class="contact-info">
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <span>schspark@gmail.com</span>
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+234  1234567890</span>
+                </li>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>6 Lorem ipsum arcu in ut metus eu sollicitudin</span>
+                </li>
+            </ul>
+
+            <div class="social-icons">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="x">
+                    <svg viewBox="0 0 24 24" width="14" height="14">
+                        <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        
+        <div class="links-section">
+            <h3 class="footer-heading">EXPLORE</h3>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </div>
+
+        
+        <div class="links-section">
+            <h3 class="footer-heading">QUICK LINKS</h3>
+            <ul class="footer-links">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+
+       
+       
+    </div>
+</footer>
+</body>
+</html>

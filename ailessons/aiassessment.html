@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchSpark Teacher's Community</title>
+    <link rel="stylesheet" href="library.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        
+        
+        <!-- Secondary Navigation -->
+        <div class="secondary-nav">
+            <div class="logo-container">
+                <img src="scspark_logo.png" alt="SchSpark Logo" class="small-logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" >Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="ai.html"class="active">Library</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <button class="notification-btn"><i class="far fa-bell"></i></button>
+                <button class="notification-btn"><i class="far fa-cart"></i></button>
+                <div class="user-avatar">
+                    <img src="avatar.png" alt="User Avatar">
+                </div>
+                <a href="#" class="login-btn">Log Out</a>
+            </div>
+        </div>
+    </header>
+  
+    <main class="assessment-container">
+        <h2>AI Short Course Assessment</h2>
+        <form id="assessment-form" onsubmit="submitAssessment(event)">
+            <div class="question">
+                <label for="username">Enter your full name:</label>
+                <input type="text" id="username" name="username" required>
+              </div>
+            <div class="question">
+                <p>1. What is the primary goal of machine learning?</p>
+                <label><input type="radio" name="q1" value="a"> To hard-code rules for decision-making</label>
+                <label><input type="radio" name="q1" value="b"> To allow computers to learn from data and improve over time</label>
+                <label><input type="radio" name="q1" value="c"> To replace databases with neural networks</label>
+                <label><input type="radio" name="q1" value="d"> To increase the speed of computer hardware</label>
+            </div>
+            <div class="question">
+                <p>2. Which best describes the difference between AI, ML, and Deep Learning?</p>
+                <label><input type="radio" name="q2" value="a"> ML is a subset of AI, and Deep Learning is a subset of ML</label>
+                <label><input type="radio" name="q2" value="b"> AI is a subset of ML, and ML is a subset of Deep Learning</label>
+                <label><input type="radio" name="q2" value="c"> Deep Learning and ML are completely unrelated to AI</label>
+                <label><input type="radio" name="q2" value="d"> AI and ML are the same, Deep Learning is a hardware concept</label>
+            </div>
+            <div class="question">
+                <p>3. What type of data does supervised learning use?</p>
+                <label><input type="radio" name="q3" value="a"> Random data</label>
+                <label><input type="radio" name="q3" value="b"> Unlabeled data</label>
+                <label><input type="radio" name="q3" value="c"> Labeled data with input-output pairs</label>
+                <label><input type="radio" name="q3" value="d"> Only numeric data</label>
+            </div>
+            <div class="question">
+                <p>4. What is the main goal of unsupervised learning?</p>
+                <label><input type="radio" name="q4" value="a"> Predict outcomes based on past labels</label>
+                <label><input type="radio" name="q4" value="b"> Discover patterns or structure in unlabeled data</label>
+                <label><input type="radio" name="q4" value="c"> Reinforce positive behaviors in models</label>
+                <label><input type="radio" name="q4" value="d"> Reduce the number of input features</label>
+            </div>
+            <div class="question">
+                <p>5. What is the purpose of normalization in data preprocessing?</p>
+                <label><input type="radio" name="q5" value="a"> To fill in missing values</label>
+                <label><input type="radio" name="q5" value="b"> To convert categorical values into numbers</label>
+                <label><input type="radio" name="q5" value="c"> To scale features to a similar range</label>
+                <label><input type="radio" name="q5" value="d"> To increase the number of data points</label>
+            </div>
+            <div class="question">
+                <p>6. Encoding categorical variables means:</p>
+                <label><input type="radio" name="q6" value="a"> Filling missing values with averages</label>
+                <label><input type="radio" name="q6" value="b"> Converting text or categories into numerical values</label>
+                <label><input type="radio" name="q6" value="c"> Scaling values between 0 and 1</label>
+                <label><input type="radio" name="q6" value="d"> Removing duplicate rows from the dataset</label>
+            </div>
+            <div class="question">
+                <p>7. Which algorithm asks a series of yes/no questions?</p>
+                <label><input type="radio" name="q7" value="a"> k-Nearest Neighbors</label>
+                <label><input type="radio" name="q7" value="b"> Linear Regression</label>
+                <label><input type="radio" name="q7" value="c"> Decision Tree</label>
+                <label><input type="radio" name="q7" value="d"> Logistic Regression</label>
+            </div>
+            <div class="question">
+                <p>8. What best describes overfitting?</p>
+                <label><input type="radio" name="q8" value="a"> The model performs well on all datasets</label>
+                <label><input type="radio" name="q8" value="b"> The model performs poorly because it's too simple</label>
+                <label><input type="radio" name="q8" value="c"> The model performs well on training data but poorly on test data</label>
+                <label><input type="radio" name="q8" value="d"> The model ignores the training data completely</label>
+            </div>
+            <div class="question">
+                <p>9. What is one key difference between deep learning and traditional machine learning?</p>
+                <label><input type="radio" name="q9" value="a"> Deep learning uses decision trees only</label>
+                <label><input type="radio" name="q9" value="b"> Traditional ML works only with images</label>
+                <label><input type="radio" name="q9" value="c"> Deep learning models can automatically extract features from raw data</label>
+                <label><input type="radio" name="q9" value="d"> Traditional ML models are always more accurate</label>
+            </div>
+            <div class="question">
+                <p>10. What is the purpose of feature selection in a machine learning project?</p>
+                <label><input type="radio" name="q10" value="a"> To select the best algorithm</label>
+                <label><input type="radio" name="q10" value="b"> To remove all categorical variables</label>
+                <label><input type="radio" name="q10" value="c"> To choose the most relevant data inputs for the model</label>
+                <label><input type="radio" name="q10" value="d"> To visualize the model output</label>
+            </div>
+            <div class="btn-group">
+                <a href="lesson6.html" class="btn">Previous</a>
+                <button type="submit" class="btn">Submit</button>
+            </div>
+        </form>
+    </main>
+    <!-- Certificate Section -->
+    <div id="certificate-section" style="display:none;">
+        <h2>🎉 Congratulations <span id="user-name-display"></span> on completing the Introduction to Machine Learning Course!</h2>
+        <p>Claim your certificate below:</p>
+        <img src="certificate.png" alt="Certificate" width="60%" />
+        <br />
+        <button id="claim-btn">Claim Certificate</button>
+      </div>
+      
+<footer class="footer">
+    <div class="footer-content">
+  
+        <div class="logo-section">
+            <img src="scspark_logo.png" alt="Logo" class="footer-logo">
+        </div>
+        <div class="contact-section">
+            <h3 class="footer-heading">CONTACT US</h3>
+            <ul class="contact-info">
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <span>schspark@gmail.com</span>
+                </li>
+                <li>
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+234  1234567890</span>
+                </li>
+                <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>6 Lorem ipsum arcu in ut metus eu sollicitudin</span>
+                </li>
+            </ul>
+
+            <div class="social-icons">
+                <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="x">
+                    <svg viewBox="0 0 24 24" width="14" height="14">
+                        <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                </a>
+                <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        
+        <div class="links-section">
+            <h3 class="footer-heading">EXPLORE</h3>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Library</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </div>
+
+        
+        <div class="links-section">
+            <h3 class="footer-heading">QUICK LINKS</h3>
+            <ul class="footer-links">
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms and Conditions</a></li>
+                <li><a href="#">FAQs</a></li>
+            </ul>
+        </div>
+
+       
+       
+    </div>
+ </footer>
+ <script>
+ function submitAssessment(event) {
+    event.preventDefault();
+  
+    const answers = [
+      "b", "a", "c", "b", "c", "b", "c", "c", "c", "c"
+    ];
+    let score = 0;
+  
+    for (let i = 1; i <= 10; i++) {
+      const selected = document.querySelector(`input[name=q${i}]:checked`);
+      if (selected && selected.value === answers[i - 1]) {
+        score++;
+      }
+    }
+  
+    const percentage = (score / 10) * 100;
+    const username = document.getElementById('username').value;
+  
+    if (percentage >= 10) { // or 60/70 depending on your pass mark
+      document.getElementById('assessment-form').style.display = 'none';
+      document.getElementById('user-name-display').textContent = username;
+      document.getElementById('certificate-section').style.display = 'block';
+    } else {
+      alert(`You scored ${percentage}%. You can retake the assessment to improve your score.`);
+    }
+  }
+</script>
+  
+</body>
+</html>
