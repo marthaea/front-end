@@ -71,13 +71,13 @@ button {
 
 .never {
   width: 55.7%;
-  margin-top: 80px;
+  margin-top: 130px;
   padding-left: 120px;
   color: #2f2f2f;
 }
 
 .never-h1 h1 {
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   font-weight: 700px;
   width: 80%;
 }
@@ -89,7 +89,7 @@ button {
 
 .start p {
   font-weight: 500;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 .start-button {
@@ -102,22 +102,85 @@ button {
   border: none;
 }
 
+
 /* main section */
 
 main {
   background-color: #f0f0f0;
 }
+
+/* Explore free courses styling */
 .sub-heading {
-  width: 83%;
-  margin-left: 9%;
+  width: 80%;
+  margin-left: 10%;
   margin-block: 2%;
+  display: flex;
+  gap: 39rem;
 }
 
 h2 {
   color: #2f2f2f;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
+
+
+.free-courses{
+  width: 80%;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  margin-left: 10%;
+  display: flex;
+  gap: 3.2rem;
+  /* background-color: #D9D9D9; */
+}
+
+.free-course1{
+  background-color:#FCFCFC;
+  width: 30%;
+}
+
+.free-course1 a{
+  text-decoration: none;
+  display: flex;
+ align-items: center;
+ gap:0.8rem;
+ padding: 10px;
+ color: #2F2F2F;
+}
+
+
+/* tutors section styling */
+
+.tutor {
+  margin-bottom:600px;
+  position: relative;
+}
+.tutor img {
+  width: 100%;
+  height: 480px;
+  filter: brightness(65%);
+  object-fit: cover;
+  margin-left: 11%;
+}
+
+#tutor-text {
+  position: absolute;
+  margin-left: 15%;
+  margin-block: 10%;
+}
+
+#tutor-text h2 {
+  color: #fcfcfc;
+  font-size: 2.3rem;
+}
+
+#tutor-text button {
+  margin-top: 50px;
+  width: 20%;
+  color: #f0f0f0;
+}
+
 
 /* column styling */
 
@@ -180,7 +243,8 @@ h2 {
 /* Student feedback */
 .testimonial {
   width: 83%;
-  margin: 20px auto 40px;
+  margin: 20px auto 0px;
+  margin-top: 100px;
 }
 
 .testifiers {
@@ -224,7 +288,7 @@ h2 {
 .upgrade img {
   width: 100%;
   height: 5%;
-  filter: brightness(65%);
+  filter: brightness(70%);
   object-fit: cover;
 }
 
@@ -251,7 +315,7 @@ h2 {
 .community img {
   width: 100%;
   height: 500px;
-  filter: brightness(65%);
+  filter: brightness(70%);
   object-fit: cover;
   z-index: -1;
 }
@@ -350,7 +414,7 @@ h2 {
 /* footer styling */
 footer{
   background-color: #FDA146;
-  margin-top: 100px;
+  margin-top: 200px;
   margin-bottom: 50px;
   padding-block: 4%;
   padding-inline: 15%;
@@ -508,7 +572,7 @@ footer h3, p{
 
   #community img{
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 1%;
   }
 
   /* Footer stacking */
