@@ -1,0 +1,525 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background-color: #f0f0f0;
+}
+/* default styling for button */
+button {
+  border-radius: 5px;
+  width: 100px;
+  height: 38px;
+  background-color: #00264d;
+  color: #f0f0f0;
+  border: none;
+  font-size: 0.8rem;
+}
+
+/* nav section */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.nav-links ul li {
+  list-style: none;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: #00264d;
+}
+
+.notification {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.buttons #login {
+  color: #00264d;
+  background-color: #f0f0f0;
+  border: 1px solid gray;
+}
+
+/* hero section */
+.hero {
+  background-image: url(../images/main\ backdrop.png);
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  display: flex;
+}
+
+.never {
+  width: 55.7%;
+  margin-top: 128px;
+  padding-left: 120px;
+  color: #2f2f2f;
+}
+
+.never-h1 h1 {
+  font-size: 2.3rem;
+  font-weight: 700px;
+  width: 80%;
+}
+
+.start {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.start p {
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.start-button {
+  border-radius: 5px;
+  width: 130px;
+  height: 40px;
+  margin-top: 30px;
+  background-color: #00264d;
+  color: #f0f0f0;
+  border: none;
+}
+
+/* main section */
+
+main {
+  background-color: #f0f0f0;
+}
+.sub-heading {
+  width: 83%;
+  margin-left: 9%;
+  margin-block: 2%;
+}
+
+h2 {
+  color: #2f2f2f;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* column styling */
+
+.courses {
+  width: 83%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+#grid {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+#course {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 340px;
+  /* margin: auto; */
+}
+
+#course-title {
+  margin: 10px 5px 5px 10px;
+  padding: 0px 10px;
+  width: 95%;
+  line-height: 20px;
+}
+
+#course-title h5 {
+  font-weight: 600;
+  color: #2f2f2f;
+}
+
+#enroll {
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  gap: 9rem;
+  color: #2f2f2f;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#enroll-button {
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+  background-color: #00264d;
+  color: #f0f0f0;
+  border: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+
+/* Student feedback */
+.testimonial {
+  width: 83%;
+  margin: 20px auto 40px;
+}
+
+.testifiers {
+  display: flex;
+  margin-bottom: 50px;
+  margin-top: 40px;
+  gap: 1.5rem;
+}
+
+.testimony {
+  background-color: #ffffff;
+  width: 35%;
+  box-shadow: 0px 4px 8px 0 rgba(58, 56, 56, 0.19),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#profile {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.lorem {
+  padding-left: 40px;
+  padding-right: 10px;
+  width: 332px;
+  font-size: 0.9rem;
+}
+
+#star {
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+/* upgrade styling */
+
+.upgrade {
+  margin-bottom: 750px;
+  position: relative;
+}
+.upgrade img {
+  width: 100%;
+  height: 5%;
+  filter: brightness(65%);
+  object-fit: cover;
+}
+
+#upgrade-text {
+  position: absolute;
+  text-align: center;
+  margin-left: 28%;
+  margin-block: 25%;
+}
+
+#upgrade-text h2 {
+  color: #fcfcfc;
+  opacity: 0.85;
+  text-align: center;
+  font-size: 2.3rem;
+}
+
+/* community section */
+
+.community {
+  width: 83%;
+}
+
+.community img {
+  width: 100%;
+  height: 500px;
+  filter: brightness(65%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+#community-text {
+  position: relative;
+  margin-inline: 30px;
+  padding-top: 100px;
+  width: 45%;
+}
+
+#community-text h2 {
+  color: #fcfcfc;
+  opacity: 0.85;
+  font-size: 2rem;
+}
+
+#community-text button {
+  margin-top: 70px;
+  width: 25%;
+}
+
+/* This styling wasn't giving what i wanted. So i used an alternative method */
+
+/* .community {
+  width: 90%;
+  background-image: url(../images/teachers\ hand.jpeg);
+  background-size: cover;
+  height: 500px;
+  margin: 20px auto 70px;
+  background-repeat: no-repeat;
+  filter: brightness(65%);
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.community{
+  margin:100px auto 70px;
+}
+
+.community div {
+  width: 550px;
+}
+
+.community div h2 {
+  font-size: 2.5rem;
+  filter: brightness(5%);
+}
+
+.community button {
+  width: 25%;
+  height: 30%;
+  margin-top: 90px;
+  border-radius: 5px;
+  height: 30px;
+  background-color: #00264d;
+  color: #f0f0f0;
+  border: none;
+  font-size: 1rem;
+} */
+
+/* community section */
+/* .community {
+  width: 95%
+}
+
+.community img {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  filter: brightness(75%); ;
+  z-index: -1;
+}
+
+
+#community-text{
+  position: relative;
+  margin-inline: 30px;
+ padding-top: 100px;
+ width: 45%;
+}
+
+#text h2{
+  color:#FCFCFC;
+  opacity: 1;
+  font-size: 2.2rem;
+}
+
+#community-text button{
+  margin-top: 70px;
+  width: 25%;
+} */
+
+
+/* footer styling */
+footer{
+  background-color: #FDA146;
+  margin-top: 100px;
+  margin-bottom: 50px;
+  padding-block: 4%;
+  padding-inline: 15%;
+  display: flex;
+  justify-content: space-between
+}
+
+footer h3, p{
+  color: #00264D;
+}
+
+.contact{
+  display: flex;
+  gap: 0.7rem;
+  margin-top:10px;
+  align-items: center;
+  font-size: 0.8em;
+}
+
+.contact img{
+  width: 4%;
+  height: 4%;
+}
+
+.socials{
+  margin-top: 30px;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.socials img{
+  width: 4%;
+  height: 4%;
+}
+
+#href{
+  display: flex;
+  flex-direction: column;
+  margin-top: 15%;
+  
+
+}
+
+#href a{
+  text-decoration: none;
+  color: #00264d;
+  margin-bottom: 1rem;
+  font-size: 0.8em;
+}
+
+
+/* Mobile screen reponsiveness */
+
+@media screen and (max-width: 768px) {
+
+  /* Navbar adjustments */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .notification {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .buttons {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  /* Hero section becomes column */
+  .hero {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .never {
+    width: 100%;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .never-h1 h1 {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+
+  .start p {
+    font-size: 1rem;
+  }
+
+  .hero img {
+    padding: 0;
+    margin: auto;
+    height: auto;
+    max-width: 90%;
+  }
+
+  /* Courses in one column */
+  #grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #course {
+    width: 90%;
+  }
+
+  /* Testimonials stack vertically */
+  .testifiers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimony {
+    width: 90%;
+  }
+
+  /* Upgrade section text repositioning */
+  #upgrade-text {
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  #upgrade-text h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Community section text repositioning */
+  #community-text {
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  #community-text h2 {
+    font-size: 1.5rem;
+  }
+
+  #community img{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  /* Footer stacking */
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  footer > div {
+    width: 90%;
+  }
+}
