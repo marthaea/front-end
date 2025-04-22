@@ -38,3 +38,9 @@
       });
   });
 
+  const markAllButton = document.querySelector('.mark-all');
+  const unreadNotifications = document.querySelectorAll('.notification.unread');
+  
+  alert('More options coming soon!');
+
+  alert('You have new notifications!');

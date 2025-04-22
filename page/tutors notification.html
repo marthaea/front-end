@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Notification Panel</title>
   <link rel="stylesheet" href="./tutors notification.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -28,6 +31,10 @@
                     <img src="./Images/iconamoon_notification-bold.jpg" alt="icon">
                 </div>
 
+                <div class="mail-box" onclick="window.location.href='messages.html'">
+                  <img src="./images/oui_email.png">
+                                    </div>
+
                 <div class="user-initial">
                     <h1>JA</h1>
                 </div>
@@ -41,65 +48,24 @@
     </header>
 
     <main>
-        <div class="notification-wrapper">
-  <div class="notification-container">
+     <div class="top">  
     <div class="header">
       <h2>NOTIFICATION</h2>
       <a href="#" class="mark-all">Mark all as read</a>
     </div>
-
-    <div class="tabs">
       <button class="tab active">ALL </button>
-    </div>
+    
+     </div>
 
     <div class="notification-list">
       <div class="notification unread">
         <div class="left-section">
             <span class="unread-dot"></span>
-          <img src="./images/Ellipse 40.png" alt="Profile" class="profile-pic" />
-        </div>
-        <div class="content">
-          <p>Abigiya Mesfin left a 5 star review.</p>
-        </div>
-        <div class="time-container">
-          <span class="time">3h</span>
-          <span class="ellipsis">...</span>
-        </div>
-      </div>
-
-      <div class="notification unread">
-        <div class="left-section">
-            <span class="unread-dot"></span>
-          <img src="./images/Ellipse 40 (1).png" alt="Profile" class="profile-pic" />
-        </div>
-        <div class="content">
-          <p>Henan Ali booked a session for Wednesday, April 23, 3:00 PM - 4:00 PM</p>
-        </div>
-        <div class="time-container">
-          <span class="time">4h</span>
-          <span class="ellipsis">...</span>
-        </div>
-      </div>
-
-      <div class="notification">
-        <div class="left-section">
           <img src="./images/Ellipse 40 (2).png" alt="Profile" class="profile-pic" />
         </div>
-        <div class="content">
-          <p>Your lesson with Thomas Wilson has been moved to Friday, April 25, at 2:00 PM</p>
-        </div>
-        <div class="time-container">
-          <span class="time">6h</span>
-          <span class="ellipsis">...</span>
-        </div>
-      </div>
 
-      <div class="notification">
-        <div class="left-section">
-          <img src="./images/Ellipse 40 (2).png" alt="Profile" class="profile-pic" />
-        </div>
         <div class="content">
-          <p>You received a new message from Mr. Thomas Wilson.</p>
+          <p>You received a new message from Mr.Thomas Wilson.</p>
         </div>
         <div class="time-container">
           <span class="time">15h</span>
@@ -109,99 +75,61 @@
 
       <div class="notification">
         <div class="left-section">
-          <img src="./images/Ellipse 40 (3).png" alt="Profile" class="profile-pic" />
+          <span class="unread-dot"></span>
+          <img src="./images/Ellipse 40 (2).png" alt="Profile" class="profile-pic" />
         </div>
         <div class="content">
-          <p>Scara Luef wants to book a session for Biology class.</p>
+          <p>Your session with Thomas  Wilson has been moved to Friday, April 25, at 2:00 PM</p>
         </div>
         <div class="time-container">
-          <span class="time">20h</span>
+          <span class="time">9h</span>
+          <span class="ellipsis">...</span>
+        </div>
+      </div> <div class="notification">
+        <div class="left-section">
+          <span class="unread-dot"></span>
+          <img src="./images/Ellipse 40 (2).png" alt="Profile" class="profile-pic" />
+        </div>
+        <div class="content">
+          <p>You received a new message from Mr. Thomas Wilson.</p>
+        </div>
+        <div class="time-container">
+          <span class="time">3h</span>
           <span class="ellipsis">...</span>
         </div>
       </div>
 
       <div class="notification">
         <div class="left-section">
-          <img src="./images/Ellipse 40 (4).png" alt="Profile" class="profile-pic" />
+          <span class="unread-dotwoman"></span>
+
+          <img src="./images/Ellipse 40 (5).png" alt="Profile" class="profile-pic" />
+        </div>
+        <div class="content">
+          <p>Hanan Ali Booked a Session for Wednesday, April 23, 3:00 PM - 4:00 PM</p>
+        </div>
+        <div class="time-container">
+          <span class="time">4h</span>
+          <span class="ellipsis">...</span>
+        </div>
+      </div>
+
+      <div class="notification">
+        <div class="left-section">
+          <img src="./images/Ellipse 40 (10).png" alt="Profile" class="notification" />
         </div>
         <div class="content">
           <p>Abraham Tesfaye and 20 people viewed your profile. See who viewed your profile.</p>
         </div>
         <div class="time-container">
-          <span class="time">3d</span>
-          <span class="ellipsis">...</span>
-        </div>
-      </div>
-
-      <div class="notification">
-        <div class="left-section">
-          <img src="./images/Ellipse 40 (5).png" alt="Profile" class="profile-pic" />
-        </div>
-        <div class="content">
-          <p>You received a new message from Henan Ali.</p>
-        </div>
-        <div class="time-container">
-          <span class="time">3d</span>
-          <span class="ellipsis">...</span>
-        </div>
-      </div>
-
-      <div class="notification">
-        <div class="left-section">
-          <img src="./images/Ellipse 40 (6).png" alt="Profile" class="profile-pic" />
-        </div>
-        <div class="content">
-          <p>Abigiya Mesfin and other 12 people viewed your profile. See who viewed your profile.</p>
-        </div>
-        <div class="time-container">
           <span class="time">5d</span>
           <span class="ellipsis">...</span>
         </div>
       </div>
 
-      <div class="notification">
-        <div class="left-section">
-          <img src="./images/Ellipse 40 (7).png" alt="Profile" class="profile-pic" />
-        </div>
-        <div class="content">
-          <p>You have 4 messages from Gezahegn Mamo and others.</p>
-        </div>
-        <div class="time-container">
-          <span class="time">5d</span>
-          <span class="ellipsis">...</span>
-        </div>
-      </div>
-
-      <div class="notification">
-        <div class="left-section">
-          <img src="./images/Ellipse 40 (8).png" alt="Profile" class="profile-pic" />
-        </div>
-        <div class="content">
-          <p>Sara left a 4 star review. Check Abreham's review.</p>
-        </div>
-        <div class="time-container">
-          <span class="time">7d</span>
-          <span class="ellipsis">...</span>
-        </div>
-      </div>
-
-      <div class="notification">
-        <div class="left-section">
-          <img src="./images/Ellipse 40 (9).png" alt="Profile" class="profile-pic" />
-        </div>
-        <div class="content">
-          <p>Thomas Wilson booked a lesson.</p>
-        </div>
-        <div class="time-container">
-          <span class="time">7d</span>
-          <span class="ellipsis">...</span>
-        </div>
-      </div>
-
-      <button class="view-more">VIEW MORE NOTIFICATIONS</button>
     </div>
-  </div>
-</div>
+  
+
     </main>
     <footer>
         <div class="footer-content">

@@ -48,6 +48,24 @@ font-weight: 500;
     cursor: pointer;
 }
 
+.mail-box{
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  mix-blend-mode: multiply;
+  cursor: pointer;
+}
+
+.mail-box{
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+  mix-blend-mode: multiply;
+  cursor: pointer;
+}
+
+
+
 .user-initial{
     font-size:0.5rem;
     font-family: poppins;
@@ -94,7 +112,7 @@ font-weight: 500;
     justify-content: flex-start;
      width: 100%;
 }
-.notification-icon, .user-initial, .logout{
+.notification-icon,.mail-box,.user-initial, .logout{
     margin-right: 10px;
 }
 }
@@ -104,59 +122,67 @@ body{
     background-color: #f2f2f2;
     
   }
-  .notification-wrapper {
-    display: flex;
-    justify-content: center;
+  
+  .top{
+    padding: 5px;
+
+    margin: 0 auto 10px auto; /* top: 0, right/left: auto for centering, bottom: 10px */
+    background-color: white;
     align-items: center;
-    margin-top: 20px;
-    min-height: 100vh; /* Full height */
-  }
-  
-  
-  .notification-container {
-    width: 400px;
-    background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    max-width: 700px;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 15px;
   }
+  
   
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    margin-top: 15px;
   }
   
   .header h2 {
     margin: 0;
     font-size: 20px;
     font-weight: 900px;
+    font-family: poppins;
     font-style: normal;
+    margin-left: 15px;
   }
   
   .mark-all {
-    font-size: 14px;
+    font-size: 9px;
     color:#00000099;
     text-decoration: none;
+    font-family: poppins;
+    font-style: normal;
+    margin-right: 15px;
   }
   
-  .tabs {
-    margin-bottom: 15px;
-  }
   
   .tab {
-    padding: 8px 16px;
+    padding-inline: 12px;
+    padding-block: 5px;
     border: none;
     background-color: #e6e6e6;
-    border-radius: 20px;
+    border-radius: 15px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 10px;
+    font-family: poppins;
+    margin-top: -5px;
+    margin-bottom: 5px;
+    justify-content: center;
+    margin-left: 15px;
   }
   
   .tab.active {
     background-color: #FF8C1A;
-    color: white;
+    color: black;
+    
   }
   
   
@@ -165,20 +191,25 @@ body{
     display: flex;
     flex-direction: column;
     gap: 15px;
-    
+    max-width: 700px;
+    margin: 0 auto 10px auto; /* top: 0, right/left: auto for centering, bottom: 10px */
+    margin-top: 25px;
+  
   }
   
   .notification {
     display: flex;
     align-items: flex-start;
-    background-color: #f9f9f9;
     padding: 10px;
     border-radius: 8px;
+    background-color: white;
     gap: 10px;
   }
+
+  
   
   .notification.unread {
-    background-color: #00000099;
+    background-color: #00264D80;
   }
   
   .left-section {
@@ -197,17 +228,27 @@ body{
   .unread-dot {
     width: 8px;
     height: 8px;
-    background-color: #007bff;
+    background-color:white;
     border-radius: 50%;
+  }
+  .unread-dotwoman{
+    width: 8px;
+    height: 8px;
+    background-color: #0056b3;
+    border-radius: 50%;
+
   }
   
   .content p {
     margin: 0;
     font-size: 14px;
     font-weight: 700px;
+    font-family:poppins;
   }
   
   .time-container {
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     text-align: right;
     font-size: 12px;
@@ -215,24 +256,10 @@ body{
   }
   
   .ellipsis {
+    
     cursor: pointer;
   }
   
-  .view-more {
-    background-color: #00264D;
-    color: white;
-    border: none;
-    padding: 8px;
-    border-radius: 13px;
-    cursor: pointer;
-    font-size: 10px;
-    align-self: center;
-    transition: background-color 0.3s ease;
-  }
-  
-  .view-more:hover {
-    background-color: #0056b3;
-  }
   
   @media (max-width: 768px) {
     .notification-container {
@@ -257,30 +284,7 @@ body{
       font-size: 11px;
     }
   
-    .view-more {
-      font-size: 9px;
-      padding: 6px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .notification-container {
-      width: 95%;
-      padding: 10px;
-    }
-  
-    .profile-pic {
-      width: 35px;
-      height: 35px;
-    }
-  
-    .tab {
-      font-size: 12px;
-    }
-  
-    .view-more {
-      font-size: 8px;
-    }
+
   }
   
 
