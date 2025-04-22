@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.12.0/dist/emoji-picker.min.css">
     <script src="https://cdn.jsdelivr.net/npm/solar-icons@1.0.1/js/solar-icons.min.js"></script>
-    <link rel="stylesheet" href="./stylesheet/styles.css">
+    <link rel="stylesheet" href="./stylesheet/parents.css">
 </head>
 <style>
       /* === Header Styles === */
@@ -175,6 +175,31 @@
     .si {
         font-size: 16px;
     }
+    .form-group p {
+    width: 100%;
+    padding: 12px 15px;
+    /* border: 1px solid var(--border); */
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f5f5f5; /* Light gray background to match the input fields */
+    margin: 0;
+}
+
+.form-group ul {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f5f5f5; /* Light gray background */
+    margin: 0;
+    list-style-type: disc; /* Bullet points */
+    padding-left: 30px; /* Indent for bullets */
+}
+
+.form-group ul li {
+    margin-bottom: 5px;
+}
 </style>
 <body>
     <header class="header">
@@ -187,20 +212,23 @@
                 <div class="desktop-nav">
                     <ul class="nav-list">
                         <li><a href="#" class="nav-link">Home</a></li>
-                        <li><a href="#" class="nav-link">About Us</a></li>
-                        <li><a href="library.html" class="nav-link">Library</a></li>
-                        <li><a href="#" class="nav-link">Market Place</a></li>
+                        <li><a href="about us.html" class="nav-link">About Us</a></li>
+                        <li><a href="../tutor-marketplace/marketplace.html" class="nav-link">Market Place</a></li>
                         <li><a href="Contact us.html" class="nav-link">Contact Us</a></li>
                     </ul>
                     
                     <div class="nav-icons">
-                        <a href="#" class="icon-link"><i class="fa-solid fa-bell"></i></a>
-                        <a href="#" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="notification.html" class="icon-link"><i class="fa-solid fa-bell"></i></a>
+                        <a href="#" class="icon-link">
+                            <i class="fa-solid fa-envelope"></i>
+                          </a>
+                          <div class="user-avatar">
+                            <img src="../ailessons/avatar.png" alt="User Avatar">
+                        </div>
                     </div>
                     
                     <div class="auth-buttons">
-                        <a href="login.html" class="login">Log In</a>
-                        <a href="tutors_signup.html" class="signup">Sign Up</a>
+                        <a href="login.html" class="mobile-login">Log Out</a>
                     </div>
                 </div>
                 
@@ -214,21 +242,24 @@
                 <ul class="mobile-nav-list">
                     <li><a href="#" class="mobile-nav-link">Home</a></li>
                     <li><a href="#" class="mobile-nav-link">About Us</a></li>
-                    <li><a href="#" class="mobile-nav-link">Library</a></li>
                     <li><a href="#" class="mobile-nav-link">Market Place</a></li>
-                    <li><a href="Contact us.html" class="mobile-nav-link">Contact Us</a></li>
+                    <li><a href="#" class="mobile-nav-link">Contact Us</a></li>
                     <li class="mobile-nav-icons">
                         <a href="#" class="mobile-icon-link"><i class="fa-solid fa-bell"></i></a>
-                        <a href="#" class="mobile-icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="#" class="icon-link">
+                            <i class="fa-solid fa-envelope"></i>
+                          </a>
                     </li>
                     <li class="mobile-auth-buttons">
-                        <a href="login.html" class="mobile-login">Log In</a>
-                        <a href="signup.html" class="mobile-signup">Sign Up</a>
+                        <a href="login.html" class="mobile-login">Log Out</a>
+                        
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
+
+    <main class="main-content container">
     <div class="profile-header">
         <div class="back-arrow" onclick="window.history.back()"></div>
         <h1 class="profile-title">Edit Profile</h1>
@@ -247,7 +278,7 @@
             <form id="profileForm">
                 <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" placeholder="Enter first name">
+                    <input type="text" id="firstName"  placeholder="Enter first name">
                     <div class="error-message" id="firstName-error"></div>
                 </div>
                 
@@ -265,7 +296,7 @@
                 
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="Enter email">
+                    <input type="email" id="email"  placeholder="Enter email">
                     <div class="error-message" id="email-error"></div>
                 </div>
                 
@@ -273,6 +304,40 @@
                     <label for="phone">Phone Number</label>
                     <input type="tel" id="phone" placeholder="Enter phone number">
                     <div class="error-message" id="phone-error"></div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Time Available</label>
+                    <p>Monday – Friday</p>
+                </div>
+    
+                <div class="form-group">
+                    <label>Bio</label>
+                    <p>Passionate and creative art educator with a strong background in visual and digital arts. John believes every child is an artist and strives to unlock the creative potential in every student through practical, hands-on teaching.</p>
+                </div>
+    
+                <div class="form-group">
+                    <label>Qualifications</label>
+                    <ul>
+                        <li>B.A. in Fine & Applied Arts</li>
+                        <li>M.Ed. in Arts Education</li>
+                    </ul>
+                </div>
+    
+                <div class="form-group">
+                    <label>Certifications</label>
+                    <ul>
+                        <li>Effective Classroom Management</li>
+                        <li>Certified Art Educator (NAEA)</li>
+                    </ul>
+                </div>
+    
+                <div class="form-group">
+                    <label>Work Experience</label>
+                    <ul>
+                        <li>Art Teacher, International School, Lagos September 2020 – August 2023</li>
+                        <li>Lagos Academy for Visual Arts</li>
+                    </ul>
                 </div>
                 
                 <a href="#" class="change-password" id="changePasswordBtn">Change Password</a>

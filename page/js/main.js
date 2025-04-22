@@ -213,3 +213,5 @@ document.addEventListener('DOMContentLoaded', function() {
             totalElement.textContent = `N₦${total.toLocaleString()}`;
             subTotalElement.textContent = `N₦${total.toLocaleString()}`;
           }
+
+          
