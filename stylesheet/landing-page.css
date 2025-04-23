@@ -530,7 +530,7 @@ footer h3, p{
 }
 
 h2 {
-  font-size: 1rem;
+  font-size: 0.5rem;
 }
 
 
@@ -539,12 +539,7 @@ h2 {
 }
 
 .free-course1{
-  width: 50%;
-}
-
-/* tutors section */
-.tutor img {
-  object-fit: contain;
+  width: 83%;
 }
 
 #tutor-text {
@@ -564,7 +559,6 @@ h2 {
   
 }
 
-  
   /* Courses in one column */
   #grid {
     flex-direction: column;
@@ -582,10 +576,14 @@ h2 {
   }
 
   .testimony {
-    width: 90%;
+    width: 95%;
   }
 
   /* Upgrade section text repositioning */
+  .upgrade {
+  margin-bottom: 300px;
+  }
+  
   #upgrade-text {
     margin: auto;
     left: 0;
@@ -616,6 +614,13 @@ h2 {
     margin-top: 1%;
     margin-bottom: 1%;
   }
+
+
+  #community-text button {
+  width: 30%;
+  
+}
+  
 
   /* Footer stacking */
   footer {
