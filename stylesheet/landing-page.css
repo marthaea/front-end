@@ -523,6 +523,48 @@ footer h3, p{
     max-width: 90%;
   }
 
+/* Explore free courses */
+.sub-heading {
+  width:83%;
+  gap: 1rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+
+.free-courses{
+ flex-direction:column;
+}
+
+.free-course1{
+  width: 50%;
+}
+
+/* tutors section */
+.tutor img {
+  object-fit: contain;
+}
+
+#tutor-text {
+  margin:auto;
+  left:0;
+  right:0;
+  width:100%;
+  padding:1rem;
+}
+
+#tutor-text h2 {
+  font-size: 1.5rem;
+}
+
+#tutor-text button {
+  width: 30%;
+  
+}
+
+  
   /* Courses in one column */
   #grid {
     flex-direction: column;
@@ -571,7 +613,7 @@ footer h3, p{
   }
 
   #community img{
-    margin-top: 5%;
+    margin-top: 1%;
     margin-bottom: 1%;
   }
 
