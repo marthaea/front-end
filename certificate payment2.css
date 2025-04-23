@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #F0F0F0;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0px;
+  }
+  .card {
+    display: flex;
+    background-color:#F0F0F0;
+    width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  .certificate-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .certificate-image {
+    width: 120%; /* increased from 100% */
+    height: auto;
+    display: block;
+    transform: scale(1.2); /* visually enlarge the image */
+    transform-origin: center;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 15%; /* Adjust this */
+    left: 10%; /* Adjust this */
+    width: 80%;
+    color: #072047;
+    text-align: center;
+  }
+  .text-overlay h4{
+    color: #E9BA52;
+    font: Megistica;
+    font-weight: 700;
+    font-size: 0.5rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .text-overlay p{
+    color: #022E87;
+    font-family: 'Times New Roman';
+    font-size: 9.63px;
+    font-weight: 700;
+  }
+  
+
+  .text-overlay .name {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #00264D;
+    font-family:'Balin Quiny';
+  }
+  
+  .text-overlay .underline {
+    width: 120px;
+    height: 1.5px;
+    background-color: #02327B;
+    margin: 0 auto 10px;
+  }
+  .text-overlay h6{
+    color:#022E87;
+    font-size: 7px;
+    font-weight: 100;
+    margin-top: -5px;
+    margin-bottom: 5px;
+
+  }
+  .text-overlay h5{
+    color: #00264D;
+    font-size: 0.6rem;
+    margin-bottom: 5px;
+  }
+  
+  
+  .certificate-end {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: -25px;
+    margin-left: 85px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; /* ensures nothing spills out */
+  }
+  
+  .certificate-end h6 {
+    font-size: 9px;
+    color: #022E87;
+    margin: 0;
+    flex: 1;
+  }
+  
+  .certificate-end .sign,
+  .certificate-end .logo {
+    flex-shrink: 0;
+  }
+  
+  .certificate-end .sign img,
+  .certificate-end .logo img {
+    max-height: 45px;
+    max-width: 50px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    
+  }
+  
+
+  
+  .logo{
+    margin-right: 170px;
+
+  }
+    .sign{
+        margin-right: 0px;
+
+    }
+    
+  .left-section {
+    background-color: #072047;
+    color: white;
+    width: 50%;
+    padding: 90px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .left-section img {
+    width: 220px;
+    height: auto;
+    margin: 20px auto;
+    border: 2px solid #fff;
+    
+  }
+  .left-section h2{
+font-family: poppins;
+font-size: 15px;
+margin-bottom: 10px;
+color: white;
+  }
+  .left-section h3{
+    font-family: poppins;
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-size: 0.7rem;
+  }
+    
+  .right-section {
+    background-color:#F0F0F0;
+    width: 50%;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+ 
+  h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    font-family: poppins;
+    margin-bottom: 20px;
+  }
+  
+  input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #F0F0F0;
+    margin-bottom: 15px;
+    color: #2F2F2F80;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: poppins;
+    text-align: center;
+  }
+  .card-info {
+    display: flex;
+    align-items: center;
+  }
+  .card-info input[type="text"] {
+    flex: 1;
+    margin-right: 10px;
+    color: #2F2F2F66;
+  }
+  .card-logos {
+    display: flex;
+    gap: 3px;
+  }
+  .card-logos img {
+    height: 25px;
+  }
+  .expiry-cvc {
+    display: flex;
+    gap: 10px;
+  }
+  .expiry-cvc input {
+    flex: 1;
+  }
+  .pay-btn {
+    width: 50%;
+    padding: 10px;
+    font-family: poppins;
+    background-color: #001f4d;
+    color: white;
+    font-size: 14px;
+    border: none;
+    margin: 10px auto 15px auto; /* top | horizontal | bottom | horizontal */
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }

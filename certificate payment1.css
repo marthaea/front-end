@@ -1,0 +1,372 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f8f8f8;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .card {
+    display: flex;
+    background-color: #fff;
+    width: 1000px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  .certificate-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .certificate-image {
+    width: 120%; /* increased from 100% */
+    height: auto;
+    display: block;
+    transform: scale(1.2); /* visually enlarge the image */
+    transform-origin: center;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 15%; /* Adjust this */
+    left: 10%; /* Adjust this */
+    width: 80%;
+    color: #072047;
+    text-align: center;
+  }
+  .text-overlay h4{
+    color: #E9BA52;
+    font: Megistica;
+    font-weight: 700;
+    font-size: 0.5rem;
+    margin-top: 10px;
+    text-align: center;
+  }
+  .text-overlay p{
+    color: #022E87;
+    font-family: 'Times New Roman';
+    font-size: 9.63px;
+    font-weight: 700;
+  }
+  
+
+  .text-overlay .name {
+    font-size: 10px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #00264D;
+    font-family:'Balin Quiny';
+  }
+  
+  .text-overlay .underline {
+    width: 120px;
+    height: 1.5px;
+    background-color: #02327B;
+    margin: 0 auto 10px;
+  }
+  .text-overlay h6{
+    color:#022E87;
+    font-size: 7px;
+    font-weight: 100;
+    margin-top: -5px;
+    margin-bottom: 5px;
+
+  }
+  .text-overlay h5{
+    color: #00264D;
+    font-size: 0.6rem;
+    margin-bottom: 5px;
+  }
+  
+  
+  .certificate-end {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    margin-top: -25px;
+    margin-left: 85px;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; /* ensures nothing spills out */
+  }
+  
+  .certificate-end h6 {
+    font-size: 9px;
+    color: #022E87;
+    margin: 0;
+    flex: 1;
+  }
+  
+  .certificate-end .sign,
+  .certificate-end .logo {
+    flex-shrink: 0;
+  }
+  
+  .certificate-end .sign img,
+  .certificate-end .logo img {
+    max-height: 45px;
+    max-width: 50px;
+    object-fit: contain;
+    mix-blend-mode: multiply;
+    
+  }
+  
+
+  
+  .logo{
+    margin-right: 170px;
+
+  }
+    .sign{
+        margin-right: 0px;
+
+    }
+    
+  .left-section {
+    background-color: #072047;
+    color: white;
+    width: 50%;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .left-section img {
+    width: 220px;
+    height: auto;
+    margin: 20px auto;
+    border: 2px solid #fff;
+    
+  }
+  .left-section h2{
+font-family: poppins;
+font-size: 15px;
+margin-bottom: 10px;
+  }
+  .left-section h3{
+    font-family: poppins;
+    font-weight: 500;
+    margin-bottom: 30px;
+    font-size: 0.7rem;
+  }
+  .write-up p {
+    font-size: 10px;
+    font-weight: 200;
+    font-family: poppins;
+    margin-top: 20px;
+    text-align: justify;
+    margin-left: 50px;
+
+    }
+    
+  .right-section {
+    background-color: #f5f5f5;
+    width: 50%;
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .steps div {
+    font-size: 14px;
+  }
+  .step-line {
+    position: relative;
+    flex-grow: 1;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 10px;
+  }
+  .step-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #5B50F2;
+    position: absolute;
+    top: -4px;
+  }
+  .cert-box {
+    background-color: #dcdcdc;
+    padding: 60px;
+    padding-inline: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .cert-box h3 {
+    margin: 0;
+    color: #222;
+    font-family: poppins;
+    font-weight: 700;
+  }
+  .price-btn {
+    margin-top: 15px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #072047;
+    color: white;
+    font-size: 14px;
+    cursor: default;
+  }
+  .payment-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+  .card-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 60%;
+    font-size: 14px;
+    font-family: poppins;
+    color: #2F2F2F;
+    font-weight: 500;
+    width: 100%;
+    max-width: 500px;
+
+  }
+
+  .card-icons {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    margin: 0px;
+
+  }
+  .card-icons img {
+    height: 24px;
+  }
+  .next-btn {
+    margin: -20px auto 15px auto; /* top | horizontal | bottom | horizontal */
+    padding: 10px 16px;
+    background-color: #072047;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 50%;
+    display: block;
+  }
+    
+  /* Responsive styles for tablets and smaller screens */
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .left-section img {
+    width: 150px;
+  }
+
+  .left-section h2,
+  .left-section h3 {
+    font-size: 12px;
+  }
+
+  .write-up p {
+    font-size: 9px;
+    margin-left: 0;
+  }
+
+  .cert-box {
+    padding: 30px 10px;
+  }
+
+  .cert-box h3 {
+    font-size: 14px;
+  }
+
+  .price-btn {
+    font-size: 12px;
+    padding: 6px 16px;
+  }
+
+  .card-box {
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+    max-width: 100%;
+  }
+
+  .card-icons {
+    justify-content: center;
+  }
+
+  .certificate-end {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+  .certificate-end h6 {
+    font-size: 8px;
+  }
+
+  .certificate-end .sign,
+  .certificate-end .logo {
+    margin: 5px 0;
+  }
+
+  .next-btn {
+    width: 80%;
+    font-size: 13px;
+  }
+}
+
+/* Even smaller devices like phones */
+@media (max-width: 480px) {
+  .left-section img {
+    width: 120px;
+  }
+
+  .text-overlay h4,
+  .text-overlay p,
+  .text-overlay .name,
+  .text-overlay h6,
+  .text-overlay h5 {
+    font-size: 6px !important;
+  }
+
+  .certificate-end h6 {
+    font-size: 7px;
+  }
+
+  .next-btn {
+   margin-top:15px ;
+    width: 90%;
+    font-size: 12px;
+  }
+}
