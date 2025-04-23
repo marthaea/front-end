@@ -231,3 +231,135 @@ color: white;
     border-radius: 5px;
     cursor: pointer;
   }
+
+ /* Medium Devices (Tablets and small laptops) */
+@media (max-width: 1024px) {
+  .card {
+    flex-direction: column;
+    width: 95%;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 40px 20px;
+  }
+
+  .left-section img {
+    width: 180px;
+  }
+
+  .certificate-end {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 0;
+    padding: 0 10px;
+  }
+
+  .logo {
+    margin-right: 0;
+  }
+}
+
+/* Small Devices (Phones) */
+@media (max-width: 768px) {
+  
+  .card {
+    flex-direction: column;
+    width: 95%;
+    overflow: hidden;
+    margin-top: 15px;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    padding: 30px 15px;
+  }
+
+  .certificate-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+
+  }
+
+  .certificate-image {
+    width: 100%;
+    transform: none; /* remove scale to prevent overflow */
+
+  }
+
+  .text-overlay {
+    top: 10%;
+    left: 5%;
+    width: 90%;
+  }
+
+  .text-overlay h4 {
+    font-size: 0.45rem;
+  }
+
+  .text-overlay p,
+  .text-overlay h6,
+  .text-overlay h5,
+  .text-overlay .name {
+    font-size: 8px;
+  }
+
+  .text-overlay .underline {
+    width: 80px;
+  }
+
+  .certificate-end {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 0;
+    gap: 5px;
+    padding: 0 10px;
+  }
+
+  .certificate-end h6 {
+    text-align: center;
+  }
+
+  .certificate-end .sign img,
+  .certificate-end .logo img {
+    max-height: 40px;
+    max-width: 40px;
+  }
+
+  .left-section img {
+    width: 150px;
+  }
+
+  .pay-btn {
+    width: 80%;
+  }
+}
+
+/* Extra Small Devices (very small phones) */
+@media (max-width: 480px) {
+  .left-section img {
+    width: 120px;
+  }
+
+  .left-section h2 {
+    font-size: 13px;
+  }
+
+  .left-section h3 {
+    font-size: 0.6rem;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .pay-btn {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
