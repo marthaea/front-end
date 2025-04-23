@@ -113,7 +113,7 @@ main {
 .sub-heading {
   width: 80%;
   margin-left: 10%;
-  margin-block: 3%;
+  margin-block: 2%;
   display: flex;
   gap: 39rem;
 }
@@ -527,6 +527,8 @@ footer h3, p{
 .sub-heading {
   width:90%;
   gap: 1rem;
+  margin-left:5%;
+  text-align:center;
 }
 
 .sub-heading h2 {
@@ -545,9 +547,8 @@ footer h3, p{
 /* tutors section styling */
 
   #tutor-text {
-  margin-block: 25%;
+  margin-block: 50%;
 }
-  
   
 #tutor-text h2 {
   font-size: 1rem;
