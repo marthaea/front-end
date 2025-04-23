@@ -113,7 +113,7 @@ main {
 .sub-heading {
   width: 80%;
   margin-left: 10%;
-  margin-block: 2%;
+  margin-block: 3%;
   display: flex;
   gap: 39rem;
 }
@@ -525,7 +525,7 @@ footer h3, p{
 
 /* Explore free courses */
 .sub-heading {
-  width:83%;
+  width:90%;
   gap: 1rem;
 }
 
@@ -539,13 +539,13 @@ footer h3, p{
 }
 
 .free-course1{
-  width: 83%;
+  width: 85%;
 }
 
 /* tutors section styling */
 
   #tutor-text {
-  margin-block: 15%;
+  margin-block: 25%;
 }
   
   
@@ -555,6 +555,7 @@ footer h3, p{
 
 #tutor-text button {
   width: 40%;
+  
   
 }
 
