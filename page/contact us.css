@@ -200,7 +200,7 @@ font-family: Poppins;
 }
 
 .form-groupfour textarea{
-    font-size: 1rem;
+    font-size: 15px;
     resize: none;
     margin-top: 5px;
      border-radius: 10px;
@@ -232,7 +232,7 @@ textarea::placeholder {
     background-color: #00264D;
     border-radius: 5px;
     color: white;
-    font-size: 10px;
+    font-size: 20px;
     cursor: pointer;
 
 }
