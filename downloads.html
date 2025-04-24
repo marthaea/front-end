@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SchSpark</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-picker-element@1.12.0/dist/emoji-picker.min.css">
+    <link rel="stylesheet" href="./stylesheet/styles.css">
+</head>
+<style>
+    /* Downloads Section Styles */
+
+
+    .courses-header {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.courses-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.course-filters {
+  display: flex;
+  gap: 16px;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 12px;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  padding: 6px 0;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  position: relative;
+  border: 1px sold black;
+  border-radius: 50px;
+}
+
+.filter-btn.active {
+  color: #000;
+  font-weight: 600;
+}
+
+.filter-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: -13px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000;
+}
+
+    .my-courses {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.my-courses h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.course-filters {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.course-filters span {
+  cursor: pointer;
+  color: #666;
+}
+
+.course-filters .active {
+  color: #000;
+  font-weight: bold;
+}
+
+.course-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.course-image {
+  width: 80px;
+  height: 80px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.course-content {
+  flex: 1;
+}
+
+.course-item h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.description {
+  color: #666;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.downloads::before {
+  content: "↓ ";
+}
+
+.start-course {
+  background-color: #000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Progress bar specific styles */
+.progress-container {
+  width: 100px;
+  height: 6px;
+  background-color: #e0e0e0;
+  border-radius: 3px;
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.progress-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 3px;
+}
+
+.progress-text {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #666;
+  position: relative;
+  top: -2px;
+}
+
+/* Rest of the CSS remains the same as previous version */
+.course-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Other existing styles... */
+</style>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="./images/logo1.png" alt="SchSpark Logo" width="92" height="60">
+                </div>
+                
+                <div class="desktop-nav">
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link">Home</a></li>
+                        <li><a href="#" class="nav-link">About Us</a></li>
+                        <li><a href="#" class="nav-link">Library</a></li>
+                        <li><a href="#" class="nav-link">Market Place</a></li>
+                        <li><a href="#" class="nav-link">Contact Us</a></li>
+                    </ul>
+                    
+                    <div class="nav-icons">
+                        <a href="#" class="icon-link"><i class="fa-solid fa-bell"></i></a>
+                        <a href="#" class="icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </div>
+                    
+                    <div class="auth-buttons">
+                        <a href="#" class="login">Log In</a>
+                        <a href="#" class="signup">Sign Up</a>
+                    </div>
+                </div>
+                
+                <div class="mobile-menu-toggle">
+                    <button class="hamburger">☰</button>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div class="mobile-menu">
+                <ul class="mobile-nav-list">
+                    <li><a href="#" class="mobile-nav-link">Home</a></li>
+                    <li><a href="#" class="mobile-nav-link">About Us</a></li>
+                    <li><a href="#" class="mobile-nav-link">Library</a></li>
+                    <li><a href="#" class="mobile-nav-link">Market Place</a></li>
+                    <li><a href="#" class="mobile-nav-link">Contact Us</a></li>
+                    <li class="mobile-nav-icons">
+                        <a href="#" class="mobile-icon-link"><i class="fa-solid fa-bell"></i></a>
+                        <a href="#" class="mobile-icon-link"><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                    <li class="mobile-auth-buttons">
+                        <a href="login.html" class="mobile-login">Log In</a>
+                        <a href="signup.html" class="mobile-signup">Sign Up</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content container">
+        <!-- Your main content here -->
+        <div class="courses-header">
+            <h1>My Courses</h1>
+            <div class="course-filters">
+              <button class="filter-btn active">All</button>
+              <button class="filter-btn">Downloaded</button>
+              <button class="filter-btn">Archived</button>
+              <button class="filter-btn">Favorited</button>
+            </div>
+          
+            
+            <div class="course-list">
+              <div class="course-item">
+                <div class="course-image">
+                  <img src="placeholder-course-1.jpg" alt="Course ">
+                </div>
+                <div class="course-content">
+                    <h2>Foundations of Modern Teaching in Resource-Constrained Environments</h2>
+                    <p class="description">Lorem Ipsum dolor sit amet</p>
+                    <div class="course-meta">
+                      <span class="downloads">↓ 141 lectures downloaded</span>
+                      <div class="progress-container">
+                        <div class="progress-bar" style="width: 48%"></div>
+                        <span class="progress-text">48% complete</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="course-item">
+                    <div class="course-image">
+                      <img src="placeholder-course-2.jpg" alt="Course thumbnail">
+                    </div>
+                    <div class="course-content">
+                      <h2>Basic Digital Literacy for Rural Educators</h2>
+                      <p class="description">Lorem Ipsum dolor sit amet</p>
+                      <div class="course-meta">
+                        <span class="downloads">↓ 26 lectures downloaded</span>
+                        <button class="start-course">Start Course</button>
+                      </div>
+                    </div>
+                  </div>
+                
+
+              
+                <div class="course-item">
+                    <div class="course-image">
+                      <img src="placeholder-course-1.jpg" alt="Course ">
+                    </div>
+                    <div class="course-content">
+                        <h2>Foundations of Modern Teaching in Resource-Constrained Environments</h2>
+                        <p class="description">Lorem Ipsum dolor sit amet</p>
+                        <div class="course-meta">
+                          <span class="downloads">↓ 141 lectures downloaded</span>
+                          <div class="progress-container">
+                            <div class="progress-bar" style="width: 82%"></div>
+                            <span class="progress-text">82% complete</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+                <div class="course-item">
+                    <div class="course-image">
+                      <img src="placeholder-course-1.jpg" alt="Course ">
+                    </div>
+                    <div class="course-content">
+                        <h2>Foundations of Modern Teaching in Resource-Constrained Environments</h2>
+                        <p class="description">Lorem Ipsum dolor sit amet</p>
+                        <div class="course-meta">
+                          <span class="downloads">↓ 141 lectures downloaded</span>
+                          <div class="progress-container">
+                            <div class="progress-bar" style="width: 22%"></div>
+                            <span class="progress-text">22% complete</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+
+
+
+                    <div class="course-item">
+                        <div class="course-image">
+                          <img src="placeholder-course-2.jpg" alt="Course thumbnail">
+                        </div>
+                        <div class="course-content">
+                          <h2>Basic Digital Literacy for Rural Educators</h2>
+                          <p class="description">Lorem Ipsum dolor sit amet</p>
+                          <div class="course-meta">
+                            <span class="downloads">↓ 26 lectures downloaded</span>
+                            <button class="start-course">Start Course</button>
+                          </div>
+                        </div>
+                      </div>
+                    
+             
+
+
+            </div>
+          </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container container">
+            <div class="footer-grid">
+                <!-- Contact Information -->
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="./images/logo1.png" alt="SchSpark Logo" width="100" height="100">
+                    </div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="contact-info">
+                        <li class="contact-item">
+                            <i class="fa-solid fa-envelope contact-icon"></i>
+                            <a href="mailto:schspark@gmail.com">schspark@gmail.com</a>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-phone contact-icon"></i>
+                            <a href="tel:+2341234567890">+234 1234567890</a>
+                        </li>
+                        <li class="contact-item">
+                            <i class="fa-solid fa-location-dot contact-icon"></i>
+                            <span>6 Qwerty Layout, Surulere, Lagos, Nigeria</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Explore Links -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Courses</a></li>
+                        <li><a href="#" class="footer-link">Cart</a></li>
+                        <li><a href="#" class="footer-link">Profile</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" class="footer-link">Help</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms and Conditions</a></li>
+                        <li><a href="#" class="footer-link">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="social-links">
+                <ul class="social-list">
+                    <li><img src="https://img.icons8.com/?size=48&id=118497&format=png" alt="Facebook" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/?size=48&id=32323&format=png" alt="Instagram" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/?size=48&id=13930&format=png" alt="LinkedIn" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/fluent/40/twitterx--v2.png" alt="Twitter/X" class="social-icon"></li>
+                    <li><img src="https://img.icons8.com/?size=48&id=19318&format=png" alt="YouTube" class="social-icon"></li>
+                </ul>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="copyright">
+                <p>&copy; 2025 SchSpark. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
