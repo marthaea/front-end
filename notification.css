@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+/* Footer */
+footer {
+    background-color: #FF9843;
+    color: #00264D;
+    padding: 40px 20px;
+    margin-top: 40px;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-logo {
+    width: 30%;
+  }
+  
+  .footer-logo-img {
+    width: 30%;
+    height: auto;
+    margin-bottom: 15px;
+    mix-blend-mode: multiply;
+  }
+  
+  .contact-us-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .contact-item{
+    display: flex;
+    gap: 15px;
+  margin-bottom: 10px;
+  
+  
+  }
+  .contact-item img {
+    mix-blend-mode: multiply;
+    height: auto;
+    width: 20px;
+  }
+  
+  .contact-item i {
+    margin-right: 10px;
+  }
+  
+  .twitter{
+  height: auto;
+  width: 20px;
+  margin-right: 20px;
+  }
+  .instagram{
+margin-right: 20px;
+  }
+  .facebook{
+    height: auto;
+    width: 26px;
+    margin-right: 20px;
+
+  }
+  .linkedin{
+    height: auto;
+    width: 23px;
+    margin-right: 20px;
+
+  }
+  .youtube{
+    height: auto;
+    width: 30px;
+    margin-right: 20px;
+
+  }
+  
+  .social-icons img{
+    margin-top: 15px;
+    mix-blend-mode: multiply;
+
+  }
+  
+  
+  .footer-links {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+  }
+  
+  .footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+
+  }
+  
+  .footer-column ul {
+    list-style: none;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-column ul li a {
+    color:#00264D;
+    text-decoration: none;
+  }
+  
+  .footer-right {
+    width: 20%;
+    text-align: right;
+  }
+  
+  .footer-right-logo {
+    width: 80px;
+    margin-bottom: 15px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .secondary-nav {
+      flex-direction: column;
+      padding: 10px;
+    }
+    
+    nav ul {
+      margin: 15px 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .user-actions {
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+    
+    .stats-section {
+      flex-direction: column;
+    }
+    
+    .stat-card {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .footer-content {
+      flex-direction: column;
+    }
+    
+    .footer-logo, .footer-links, .footer-right {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    
+    .footer-right {
+      text-align: left;
+    }
+  }
