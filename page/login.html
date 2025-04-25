@@ -452,6 +452,22 @@
     // Add Microsoft login API integration here
   });
 });
+         const supabase = supabase.createClient(
+      'https://uvjyezxczhfdidgjsiha.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV2anllenhjemhmZGlkZ2pzaWhhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQwMjc3NzIsImV4cCI6MjAyOTYwMzc3Mn0.fPSu7YtUCm6J3ejcUp0fjcdb4NwsmHhL-dZPAG2K5pI'
+    );
+
+    async function login() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const { error, data } = await supabase.auth.signInWithPassword({ email, password });
+      if (error) {
+        alert('Login failed: ' + error.message);
+      } else {
+        alert('Login successful!');
+        console.log(data);
+      }
+    }
 
     </script>
 </body>
