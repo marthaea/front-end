@@ -438,6 +438,24 @@
         </div>
     </footer>
     
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js">
+        <script>
+            const supabase = supabase.createClient(
+      'https://uvjyezxczhfdidgjsiha.supabase.co',
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV2anllenhjemhmZGlkZ2pzaWhhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQwMjc3NzIsImV4cCI6MjAyOTYwMzc3Mn0.fPSu7YtUCm6J3ejcUp0fjcdb4NwsmHhL-dZPAG2K5pI'
+    );
+
+    async function signUp() {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const { error } = await supabase.auth.signUp({ email, password });
+      if (error) {
+        alert('Error: ' + error.message);
+      } else {
+        alert('Check your email to confirm sign-up!');
+      }
+    }
+            </script>
+    </script>
 </body>
 </html>
