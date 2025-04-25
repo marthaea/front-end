@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate of Completion</title>
+  <link rel="stylesheet" href="certificate.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+
+    background-color: #F0F0F0;
+
+}
+.nav-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 40px;
+    
+}
+.logo img{
+    width: 100%;
+    height: auto;
+    mix-blend-mode: multiply;
+
+}
+.nav-links{
+    display: flex;
+    list-style-type: none;
+}
+.nav-links li{
+margin-right: 20px;
+font-size: 1rem;
+}
+.nav-links a{
+color: #00264D;
+text-decoration: none;
+font-size: 0.9rem;
+font-family: poppins;
+font-weight: 500;
+}
+.nav-links a:hover{
+    background-color:#2d6399 ;
+}
+
+.user-options{
+    display: flex;
+    align-items: center;
+}
+.notification-icon{
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    mix-blend-mode: multiply;
+    cursor: pointer;
+}
+
+.user-initial{
+    font-size:0.5rem;
+    font-family: poppins;
+   font-weight: bold;
+    color:white;
+    margin-right: 20px;
+    border-style: 1px solid;
+    border-radius: 30px;
+    padding: 7px;
+    background-color: #00264D;
+    cursor: pointer;
+}
+.logout h3{
+    text-align: center;
+    color: #00264D;
+    margin-right: 10px;
+    font-size: 12px;
+    border: 1px solid #00264D;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+}
+.logout h3:hover{
+    color: #2d6399;
+}
+
+@media (max-width:768px) {
+.nav-container{
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.nav-links{
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+}
+.nav-links li{
+    margin-bottom: 10px;
+}
+.user-options{
+    margin-top: 15px;
+    justify-content: flex-start;
+     width: 100%;
+}
+.notification-icon, .user-initial, .logout{
+    margin-right: 10px;
+}
+}
+
+</style>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                <img src="./Images/154de06a-b467-429c-a6b7-d5f92321af12 1.jpg" alt="logo">
+            </div>
+
+            <div>
+                <ul class="nav-links">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="./about us.html">About Us</a></li>
+                    <li><a href="#Library">Library</a></li>
+                    <li><a href="../communitypage/community.html">Community</a></li>
+                    <li><a href="./Contact us.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="user-options">
+                <div class="notification-icon">
+                    <img src="./Images/iconamoon_notification-bold.jpg" alt="icon">
+                </div>
+
+                <div class="user-initial">
+                    <h1>JA</h1>
+                </div>
+
+                <div class="logout">
+                    <h3>Log Out</h3>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+<main>
+  <div class="container">
+    <div class="title">Congratulations, Shukurat Adekola!</div>
+    <div class="left-section">
+                <div class="certificate-wrapper">
+            <img src="./images/Attestation de reconnaissance (1).png" alt="Certificate Frame" class="certificate-image">
+            <div class="text-overlay">
+              <h4>CERTIFICATE OF COMPLETION</h4>
+              <h5>This is to certify that</h5>
+              <h2 class="name">SHUKURAT ADEKOLA</h2>
+              <div class="underline"></div>
+              <h6>has successfully completed the course</h6>
+                  <h5>Effective Classroom Management</h5>
+                  
+              
+              <div class="certificate-end">
+                <h6 class="date">April 30, 2025</h6>
+              
+                <div class="sign">
+                  <img src="./images/A_tital_logo__affan__artist__arshadkhan_-removebg-preview 1 (1).png" alt="Signature"> <br> <h3>INSTRUCTOR</h3>
+                </div>
+              
+                <div class="logo">
+                  <img src="./images/154de06a-b467-429c-a6b7-d5f92321af12_1-removebg-preview.png" alt="Logo">
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="progress-text">You’ve completed 1 of 6 certifications</div>
+    <div class="buttons">
+      <button class="btn download">Download Certificate</button>
+      <button class="btn share"><span class="icon-share"></span>Share</button>
+    </div>
+  </div>
+</main>
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            <img src="./images/schsparklogo-removebg-preview.png" alt="SchSpark Logo" class="footer-logo-img">
+            <div class="contact-us-section">
+                <h3>Contact Us</h3>
+                <div class="contact-item">
+                    <img src="./Images/ic_outline-email (1).jpg">
+                    <span>schspark@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <img src="./Images/line-md_phone (2).jpg">
+                    <span>+234  1234567890</span>
+                </div>
+                <div class="contact-item">
+                    <img src="./images/fluent-color_location-ripple-24-removebg-preview.png">
+                    <span>6 Lorem ipsum arcu in ut metus eu sollicitudin</span>
+                </div>
+                <div class="social-icons">
+                    <img class="facebook" src="./images/logos_facebook__1_-removebg-preview.png">
+                    <img class="instagram"  src="./images/skill-icons_instagram__1_-removebg-preview.png">
+                    <img class="linkedin" src="./images/skill-icons_linkedin__2_-removebg-preview.png">
+                    <img class="twitter"  src="./images/prime_twitter__2_-removebg-preview.png">
+                    <img class="youtube"  src="./images/logos_youtube-icon__2_-removebg-preview.png">
+                </div>
+            </div>
+        </div>
+  
+        <div class="footer-links">
+            <div class="footer-column">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li><a href="#">Profile</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and Conditions</a></li>
+                    <li><a href="#">FAQS</a></li>
+                </ul>
+            </div>
+        </div>
+  
+        
+    </div>
+  </footer>
+ <script src="./certificate.js "></script>
+ </body>
+</html>
